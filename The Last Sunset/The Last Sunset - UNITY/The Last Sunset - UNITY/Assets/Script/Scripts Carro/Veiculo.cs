@@ -6,9 +6,10 @@ public class Veiculo : MonoBehaviour
 {
     public Transform[] MeshRodas;
     public WheelCollider[] ColisorRodas;
-    public float secrio = 1000, pesoVeiculo = 1500;
+    public float secrio = 20000, pesoVeiculo = 1500;
     private float angulo, direcao;
     private Rigidbody corpoRigido;
+    [SerializeField] float rotationZ, sensitivityZ, curva;
     void Start()
     {
         corpoRigido = GetComponent<Rigidbody>();
@@ -27,14 +28,16 @@ public class Veiculo : MonoBehaviour
         {
             angulo = Mathf.Lerp(angulo, direcao, Time.deltaTime * 2);
         }
+
     }
     void FixedUpdate()
     {
+        lockedRotation();
         ColisorRodas[0].steerAngle = angulo * 40;
         ColisorRodas[1].steerAngle = angulo * 40;
         //
-        ColisorRodas[2].motorTorque = Input.GetAxis("Vertical") * secrio;
-        ColisorRodas[3].motorTorque = Input.GetAxis("Vertical") * secrio;
+        ColisorRodas[2].motorTorque *= Input.GetAxis("Vertical") * secrio;
+        ColisorRodas[3].motorTorque *= Input.GetAxis("Vertical") * secrio;
 
         for (int x = 0; x < ColisorRodas.Length; x++)
         {
@@ -44,5 +47,14 @@ public class Veiculo : MonoBehaviour
             MeshRodas[x].position = pos;
             MeshRodas[x].rotation = quat;
         }
+    }
+
+
+    void lockedRotation()
+    {
+        rotationZ += Input.GetAxis("Horizontal") * sensitivityZ;
+        rotationZ = Mathf.Clamp(rotationZ, -45, 45);
+
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationZ, transform.localEulerAngles.z) * Time.deltaTime * curva;
     }
 }
