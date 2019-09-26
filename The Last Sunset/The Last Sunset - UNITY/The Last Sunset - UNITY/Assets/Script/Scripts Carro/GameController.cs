@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] Text textoDistancia;
     [SerializeField] Transform carroPos;
+    [SerializeField] float aumentoDistancia;
     float distancia;
     Vector3 posInicial;
 
@@ -17,7 +18,7 @@ public class GameController : MonoBehaviour
     private void Update()
     {
         Debug.Log(distancia);
-        distancia = Mathf.Round(Vector3.Distance(posInicial, carroPos.position) * 0.005f) ;
+        distancia = Mathf.Round(Vector3.Distance(posInicial, carroPos.position) * aumentoDistancia) ;
         textoDistancia.text = distancia.ToString();
     }
 
