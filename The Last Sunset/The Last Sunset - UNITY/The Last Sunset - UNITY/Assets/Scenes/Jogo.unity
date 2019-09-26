@@ -795,7 +795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plane: {fileID: 728927648148003809, guid: bbc8885c298e2f548a18cb23043a879d, type: 3}
   player: {fileID: 970548999}
-  planeSize: 10
+  planeSize: 9.5
   halfTilesX: 10
   halfTileZ: 50
 --- !u!4 &432255198
@@ -4450,7 +4450,7 @@ MonoBehaviour:
   - {fileID: 5815383384517442992}
   - {fileID: 5815383386451222344}
   - {fileID: 5815383386517069928}
-  Velocidade: 200
+  Velocidade: 60
   pesoVeiculo: 1000
   rotationZ: 0
   sensitivityZ: 1.5
