@@ -20,7 +20,7 @@ public class GeraInfinito : MonoBehaviour
     public GameObject player;
    
 
-   public int planeSize = 10;
+   public float planeSize = 10;
    public int halfTilesX = 10;
    public int halfTileZ = 15;
 
@@ -60,7 +60,7 @@ public class GeraInfinito : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         int xMove = (int)(player.transform.position.x - startPos.x);

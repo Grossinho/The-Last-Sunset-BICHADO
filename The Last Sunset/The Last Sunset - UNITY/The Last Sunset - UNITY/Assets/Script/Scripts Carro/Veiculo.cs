@@ -6,7 +6,7 @@ public class Veiculo : MonoBehaviour
 {
     public Transform[] MeshRodas;
     public WheelCollider[] ColisorRodas;
-    public float Velocidade = 200, pesoVeiculo = 1500;
+    public float Velocidade = 60, pesoVeiculo = 1500;
     private float angulo, direcao;
     private Rigidbody corpoRigido;
     [SerializeField] float rotationZ, sensitivityZ, curva;
