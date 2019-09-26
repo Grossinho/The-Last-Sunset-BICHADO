@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 209168907}
   - component: {fileID: 209168906}
   m_Layer: 0
-  m_Name: posCoqueiro
+  m_Name: spawnCoqueiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 1916278772771888274, guid: 0691085420180c4469a8a3081dcc065e, type: 3}
-  cronometro: 1
+  cronometro: 0.25
 --- !u!4 &209168907
 Transform:
   m_ObjectHideFlags: 0
@@ -454,7 +454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209168905}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 76.43, y: -63.69, z: -124.76}
+  m_LocalPosition: {x: 25, y: -63.69, z: -124.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 483003469}
@@ -894,8 +894,8 @@ Transform:
   - {fileID: 1987118605}
   - {fileID: 338718032}
   - {fileID: 209168907}
-  - {fileID: 1593469082}
   - {fileID: 864408493}
+  - {fileID: 1593469082}
   - {fileID: 1459644047}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1464,7 +1464,7 @@ GameObject:
   - component: {fileID: 864408493}
   - component: {fileID: 864408494}
   m_Layer: 0
-  m_Name: posCoqueiro (2)
+  m_Name: spawnCoqueiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1478,11 +1478,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864408492}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 245.9, y: -63.69, z: -124.76}
+  m_LocalPosition: {x: 35, y: -63.69, z: -124.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 483003469}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &864408494
 MonoBehaviour:
@@ -2883,7 +2883,7 @@ GameObject:
   - component: {fileID: 1459644047}
   - component: {fileID: 1459644048}
   m_Layer: 0
-  m_Name: posCoqueiro (3)
+  m_Name: spawnCoqueiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2897,7 +2897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459644046}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -185.5, y: -63.69, z: -124.76}
+  m_LocalPosition: {x: -35, y: -63.69, z: -124.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 483003469}
@@ -2916,7 +2916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 1916278772771888274, guid: 0691085420180c4469a8a3081dcc065e, type: 3}
-  cronometro: 1
+  cronometro: 0.33
 --- !u!1 &1462124186
 GameObject:
   m_ObjectHideFlags: 0
@@ -3007,7 +3007,7 @@ GameObject:
   - component: {fileID: 1593469082}
   - component: {fileID: 1593469083}
   m_Layer: 0
-  m_Name: posCoqueiro (1)
+  m_Name: spawnCoqueiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3021,11 +3021,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593469081}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -298.15, y: -63.69, z: -124.76}
+  m_LocalPosition: {x: -25, y: -63.69, z: -124.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 483003469}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1593469083
 MonoBehaviour:
@@ -3040,7 +3040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 1916278772771888274, guid: 0691085420180c4469a8a3081dcc065e, type: 3}
-  cronometro: 5.28
+  cronometro: 0.75
 --- !u!1 &1678235924
 GameObject:
   m_ObjectHideFlags: 0
@@ -4450,7 +4450,7 @@ MonoBehaviour:
   - {fileID: 5815383384517442992}
   - {fileID: 5815383386451222344}
   - {fileID: 5815383386517069928}
-  Velocidade: 200
+  Velocidade: 50
   pesoVeiculo: 1000
   rotationZ: 0
   sensitivityZ: 1.5
