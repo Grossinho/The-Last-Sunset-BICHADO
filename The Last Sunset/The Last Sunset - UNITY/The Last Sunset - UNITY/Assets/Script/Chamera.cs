@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class Chamera : MonoBehaviour
 {
 
 
@@ -18,7 +18,7 @@ public class Camera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.position = offset + camer.transform.position;
     }

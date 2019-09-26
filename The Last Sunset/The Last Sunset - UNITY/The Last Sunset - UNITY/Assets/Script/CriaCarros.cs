@@ -16,7 +16,7 @@ public class CriaCarros : MonoBehaviour
     float cronometro;
     float geraFita;
 
-
+    
     private void Awake()
     {
         
