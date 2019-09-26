@@ -18,7 +18,7 @@ public class Chamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.position = offset + camer.transform.position;
     }
