@@ -9,7 +9,10 @@ public class Veiculo : MonoBehaviour
     public float Velocidade = 60, pesoVeiculo = 1500;
     private float angulo, direcao;
     private Rigidbody corpoRigido;
+    [SerializeField] float limiteLateral;
     [SerializeField] float rotationZ, sensitivityZ, curva;
+    [SerializeField] ParticleSystem faisca;
+
     void Start()
     {
         corpoRigido = GetComponent<Rigidbody>();
@@ -19,6 +22,9 @@ public class Veiculo : MonoBehaviour
     void Update()
     {
         corpoRigido.velocity = transform.forward * Velocidade;
+
+        
+
         direcao = Input.GetAxis("Horizontal");
         if (Input.GetAxis("Horizontal") > 0.7f || Input.GetAxis("Horizontal") < -0.7f)
         {
@@ -27,6 +33,13 @@ public class Veiculo : MonoBehaviour
         else
         {
             angulo = Mathf.Lerp(angulo, direcao, Time.deltaTime * 2);
+        }
+
+        if (Mathf.Abs(transform.position.x) > limiteLateral)
+        {
+            transform.position = new Vector3(limiteLateral * Mathf.Sign(transform.position.x), transform.position.y, transform.position.z);
+            transform.localEulerAngles = new Vector3(0, 0, 0);
+
         }
 
     }
@@ -57,4 +70,5 @@ public class Veiculo : MonoBehaviour
 
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationZ, transform.localEulerAngles.z) * Time.deltaTime * curva;
     }
+
 }
