@@ -171,7 +171,7 @@ GameObject:
   m_Layer: 0
   m_Name: VEICULO 1
   m_TagString: Player
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -235,8 +235,13 @@ MonoBehaviour:
   - {fileID: 752320804546473}
   - {fileID: 752319938626897}
   - {fileID: 752320138705521}
-  secrio: 1500
+  Velocidade: 60
   pesoVeiculo: 1000
+  limiteLateral: 0
+  rotationZ: 0
+  sensitivityZ: 0
+  curva: 0
+  faisca: {fileID: 0}
 --- !u!65 &752320733661194
 BoxCollider:
   m_ObjectHideFlags: 0

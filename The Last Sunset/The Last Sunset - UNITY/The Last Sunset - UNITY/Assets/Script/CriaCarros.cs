@@ -75,7 +75,7 @@ public class CriaCarros : MonoBehaviour
     {
 
 
-        GameObject veiculos = (GameObject)Instantiate(carros[Random.Range(0, 1)], pos[Random.Range(0, 1)].position, pos[0].rotation);
+        GameObject veiculos = (GameObject)Instantiate(carros[Random.Range(0,carros.Count)], pos[Random.Range(0, pos.Count)].position, pos[0].rotation);
 
 
 
