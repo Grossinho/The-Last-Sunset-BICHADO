@@ -1,34 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Load : MonoBehaviour
 {
-    public GameObject LoadJogo;
+    public GameObject loadingObj;
     public Slider slider;
-    public Text progressoTexto;
-    
-    public void Loadjogo (int index)
+
+    AsyncOperation async;
+
+    public void LoadScene()
     {
-        StartCoroutine(LoadAsynchronosly(index));
+        StartCoroutine(loading());
     }
 
-    IEnumerator LoadAsynchronosly (int sceneIndex)
+    IEnumerator loading()
     {
-        LoadJogo.SetActive(true);
+        loadingObj.SetActive(true);
+        async = SceneManager.LoadSceneAsync(0);
+        async.allowSceneActivation = false;
 
-
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-
-        while (!operation.isDone)
+        while (async.isDone == false)
         {
-            float progresso = Mathf.Clamp(operation.progress / 0.9f, 0, 1);
-            slider.value = progresso;
-            Debug.Log(progresso);
-            progressoTexto.text = progresso * 100 + "%";
+            slider.value = async.progress;
+            if (async.progress == 0.9f)
+            {
+                slider.value = 1f;
+                async.allowSceneActivation = true;
+            }
+
             yield return null;
         }
     }
+
+
 }
