@@ -366,17 +366,17 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 0, b: 0.21960784, a: 1}
-      key1: {r: 1, g: 0, b: 0.832973, a: 0.3529412}
-      key2: {r: 0.88235295, g: 0.6416325, b: 0.26274514, a: 0}
-      key3: {r: 0.8396226, g: 0.35248306, b: 0.35248306, a: 0}
+      key1: {r: 0.9622642, g: 0.59460664, b: 0.90026695, a: 0.3529412}
+      key2: {r: 0.9622642, g: 0.86694556, b: 0.9402191, a: 0}
+      key3: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 40670
-      ctime2: 48380
-      ctime3: 60716
+      ctime1: 34695
+      ctime2: 53006
+      ctime3: 48380
       ctime4: 0
       ctime5: 0
       ctime6: 0
@@ -1141,16 +1141,16 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 0, b: 0.21960784, a: 1}
-      key1: {r: 1, g: 0, b: 0.7671118, a: 0.3529412}
-      key2: {r: 0.92156863, g: 0.5403828, b: 0.17254902, a: 0}
+      key1: {r: 0.9433962, g: 0.6541474, b: 0.8764719, a: 0.3529412}
+      key2: {r: 0.9528302, g: 0.68765575, b: 0.8234357, a: 0}
       key3: {r: 0.8396226, g: 0.35248306, b: 0.35248306, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 40863
-      ctime2: 50501
+      ctime1: 37394
+      ctime2: 55512
       ctime3: 60716
       ctime4: 0
       ctime5: 0
@@ -1165,7 +1165,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 4
+      m_NumColorKeys: 3
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 90
@@ -2330,25 +2330,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1029675555 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5160606088156269205, guid: 591193480489e4d49a053cb82a0bacec,
-    type: 3}
-  m_PrefabInstance: {fileID: 2120670477}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1029675560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029675555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f2d36d088470b74cb7276d688a5366e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 5815383384578806301}
 --- !u!1 &1036037617
 GameObject:
   m_ObjectHideFlags: 0
@@ -3742,6 +3723,104 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1706548513
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5160606088156269205, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_Name
+      value: MafiaCarro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4629541915671828127, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: -4629541915671828127, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940560476946751793, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.9883027
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940560476946751793, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.3787429
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029675560, guid: 591193480489e4d49a053cb82a0bacec, type: 3}
+      propertyPath: velo
+      value: 50
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 591193480489e4d49a053cb82a0bacec, type: 3}
 --- !u!1 &1782570259
 GameObject:
   m_ObjectHideFlags: 0
@@ -4433,80 +4512,6 @@ MonoBehaviour:
   carroPos: {fileID: 5815383384578806300}
   aumentoDistancia: 0.005
   aud: {fileID: 8936775733529155200}
---- !u!1001 &2120670477
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5160606088156269205, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_Name
-      value: MafiaCarro
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.09000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -97.776184
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.99994797
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.0102041215
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 181.16899
-      objectReference: {fileID: 0}
-    - target: {fileID: 8198097500542023814, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4629541915671828127, guid: 591193480489e4d49a053cb82a0bacec,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 591193480489e4d49a053cb82a0bacec, type: 3}
 --- !u!4 &10743436424521309
 Transform:
   m_ObjectHideFlags: 0
@@ -4880,7 +4885,7 @@ GameObject:
   - component: {fileID: 6107257591987195961}
   m_Layer: 0
   m_Name: FaroisFrontais
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4942,7 +4947,7 @@ GameObject:
   - component: {fileID: 5877185873791859863}
   m_Layer: 0
   m_Name: Corpo
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5271,7 +5276,6 @@ MonoBehaviour:
   rotationZ: 0
   sensitivityZ: 1.5
   curva: 30
-  faisca: {fileID: 0}
 --- !u!4 &5815383384578806300
 Transform:
   m_ObjectHideFlags: 0
@@ -5280,7 +5284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5815383384578806301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.45999992, z: -161.4}
+  m_LocalPosition: {x: 0, y: 0.46, z: -161}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3777948658004946291}
@@ -5709,7 +5713,7 @@ GameObject:
   - component: {fileID: 4330967400250647468}
   m_Layer: 0
   m_Name: NegocioLateral
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

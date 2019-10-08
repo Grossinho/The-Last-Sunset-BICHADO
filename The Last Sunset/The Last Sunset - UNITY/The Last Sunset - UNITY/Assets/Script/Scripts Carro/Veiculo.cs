@@ -6,12 +6,15 @@ public class Veiculo : MonoBehaviour
 {
     public Transform[] MeshRodas;
     public WheelCollider[] ColisorRodas;
-    public float Velocidade = 60, pesoVeiculo = 1500;
+    [SerializeField] float Velocidade, pesoVeiculo = 1500;
     private float angulo, direcao;
     private Rigidbody corpoRigido;
     [SerializeField] float limiteLateral;
     [SerializeField] float rotationZ, sensitivityZ, curva;
-    [SerializeField] ParticleSystem faisca;
+    
+
+   
+    
 
     void Start()
     {
@@ -22,7 +25,7 @@ public class Veiculo : MonoBehaviour
     void Update()
     {
         corpoRigido.velocity = transform.forward * Velocidade;
-
+        Velocidade += 0.5f * Time.deltaTime;
         
 
         direcao = Input.GetAxis("Horizontal");
@@ -35,12 +38,8 @@ public class Veiculo : MonoBehaviour
             angulo = Mathf.Lerp(angulo, direcao, Time.deltaTime * 2);
         }
 
-        if (Mathf.Abs(transform.position.x) > limiteLateral)
-        {
-            transform.position = new Vector3(limiteLateral * Mathf.Sign(transform.position.x), transform.position.y, transform.position.z);
-            transform.localEulerAngles = new Vector3(0, 0, 0);
 
-        }
+        colisaoLateral();
 
     }
     void FixedUpdate()
@@ -60,6 +59,23 @@ public class Veiculo : MonoBehaviour
             MeshRodas[x].position = pos;
             MeshRodas[x].rotation = quat;
         }
+
+        
+    }
+
+
+    public void colisaoLateral()
+    {
+        
+        if (Mathf.Abs(transform.position.x) > limiteLateral)
+        {
+            transform.position = new Vector3(limiteLateral * Mathf.Sign(transform.position.x), transform.position.y, transform.position.z);
+            transform.localEulerAngles = new Vector3(0, 0, 0);
+
+            Velocidade = 50f;
+        }
+        
+
     }
 
 

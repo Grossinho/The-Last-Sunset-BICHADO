@@ -47,14 +47,14 @@ public class CriaCarros : MonoBehaviour
         cronometro += 1 * Time.deltaTime;
         geraFita += 1 * Time.deltaTime;
 
-        if (cronometro > +3)
+        if (cronometro > 2)
         {
 
             RetornaCarro();
             cronometro = 0;
 
         }
-        else if (cronometro > 3 && Input.GetButtonUp("Vertical"))
+        else if (cronometro > 1 && Input.GetButtonUp("Vertical"))
         {
 
             JogaCarro();

@@ -6,6 +6,9 @@ public class Coletavel : MonoBehaviour
 {
     [SerializeField] AudioClip[] musicas;
 
+
+    CarroMafia car;
+
     private void Start()
     {
        // Destroy(gameObject, 30);
@@ -13,8 +16,12 @@ public class Coletavel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        SoundManager.instance.RandomPlay(musicas);
-        Destroy(gameObject);       
+        if (other.gameObject.CompareTag("Player"))
+        {
+            SoundManager.instance.RandomPlay(musicas);
+            Destroy(gameObject);       
+
+        }
     }
 
    
