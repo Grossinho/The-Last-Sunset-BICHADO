@@ -5,19 +5,18 @@ using UnityEngine;
 public class CarroMafia : MonoBehaviour
 {
     Rigidbody rgb;
+    
 
+    //public GameObject player;
 
-    public GameObject player;
-
-    float offset;
-    float trans;
+    
     [SerializeField] private float velo;
-    public bool colide;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-
+       
         rgb = GetComponent<Rigidbody>();
     }
 
@@ -27,12 +26,7 @@ public class CarroMafia : MonoBehaviour
         rgb.velocity = transform.forward * velo;
 
         
-        /*
-         * transform.position = new Vector3 (transform.position.x, transform.position.y, offset + player.transform.position.z);
         
-        offset += velo* Time.deltaTime;
-
-         trans += trans + Mathf.Sin(Time.deltaTime) * 8;
-         */
+         
     }
 }

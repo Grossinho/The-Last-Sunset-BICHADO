@@ -87,4 +87,12 @@ public class Veiculo : MonoBehaviour
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationZ, transform.localEulerAngles.z) * Time.deltaTime * curva;
     }
 
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Veiculo"))
+        Velocidade = 40f;
+
+    }
+
 }
