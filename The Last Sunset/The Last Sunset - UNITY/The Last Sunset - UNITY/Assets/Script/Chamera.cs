@@ -6,7 +6,7 @@ public class Chamera : MonoBehaviour
 {
 
 
-    public Vector3 offset;
+    float offset;
 
     public GameObject camer;
 
@@ -14,12 +14,12 @@ public class Chamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        offset = transform.position - camer.transform.position;
+        offset = transform.position.z - camer.transform.position.z;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position = offset + camer.transform.position;
+        transform.position = new Vector3( transform.position.x,transform.position.y, offset + camer.transform.position.z );
     }
 }
