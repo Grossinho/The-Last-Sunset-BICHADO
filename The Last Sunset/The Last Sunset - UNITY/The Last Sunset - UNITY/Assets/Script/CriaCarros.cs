@@ -6,10 +6,12 @@ public class CriaCarros : MonoBehaviour
 {
 
     [SerializeField] List <Transform> pos;
-    [SerializeField] List <Transform> posCosta;
+   
     [SerializeField] List <GameObject> carros;
     [SerializeField] GameObject Fita;
     [SerializeField] Transform spawnFita;
+
+
 
     [HideInInspector] public CriaCarros instancia;
 
@@ -54,13 +56,7 @@ public class CriaCarros : MonoBehaviour
             cronometro = 0;
 
         }
-        else if (cronometro > 1 && Input.GetButtonUp("Vertical"))
-        {
-
-            JogaCarro();
-            cronometro = 0;
-
-        }
+        
 
         if (geraFita > 10)
         {
@@ -80,8 +76,8 @@ public class CriaCarros : MonoBehaviour
 
 
         veiculos.GetComponent<Transform>().Rotate(new Vector3(0, 180, 0));
-        veiculos.GetComponent<Rigidbody>().velocity = transform.forward * 20f;
-        veiculos.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 150) * -50);
+        //veiculos.GetComponent<Rigidbody>().velocity = transform.forward * 20f;
+        //veiculos.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 150) * -50);
 
 
 
@@ -89,17 +85,7 @@ public class CriaCarros : MonoBehaviour
     }
 
 
-    void JogaCarro()
-    {
-
-
-        GameObject veiculos = (GameObject)Instantiate(carros[Random.Range(0, 1)], posCosta[Random.Range(0, 1)].position, posCosta[0].rotation);
-        veiculos.GetComponent<Transform>().Rotate(new Vector3(0, 180, 0));
-        veiculos.GetComponent<Rigidbody>().velocity = transform.forward * 70f;
-        veiculos.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 150), ForceMode.Force);
-
-        Destroy(veiculos, 25f);
-    }
+    
 
 
 
