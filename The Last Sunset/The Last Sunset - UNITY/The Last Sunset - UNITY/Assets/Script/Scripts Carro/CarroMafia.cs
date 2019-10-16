@@ -5,34 +5,32 @@ using UnityEngine;
 public class CarroMafia : MonoBehaviour
 {
     Rigidbody rgb;
+    private bool capotado;
 
+    //public GameObject player;
 
-    public GameObject player;
-
-    float offset;
-    float trans;
+    
     [SerializeField] private float velo;
-    public bool colide;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-
+        capotado = false;
         rgb = GetComponent<Rigidbody>();
+        rgb.velocity = transform.forward * velo;
     }
 
     // Update is called once per frame
     void Update()
     {
-        rgb.velocity = transform.forward * velo;
+        if (capotado)
+            transform.RotateAround(Vector3.zero, Vector3.up, 20 * Time.deltaTime);
+    }
 
-        
-        /*
-         * transform.position = new Vector3 (transform.position.x, transform.position.y, offset + player.transform.position.z);
-        
-        offset += velo* Time.deltaTime;
-
-         trans += trans + Mathf.Sin(Time.deltaTime) * 8;
-         */
+    public void CapotaMafia()
+    {
+        rgb.velocity = transform.forward * 0;
+        capotado = true;
     }
 }

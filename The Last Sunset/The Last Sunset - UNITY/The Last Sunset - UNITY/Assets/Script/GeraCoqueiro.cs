@@ -50,7 +50,7 @@ public class GeraCoqueiro : MonoBehaviour
         GameObject Coco = (GameObject)Instantiate(plane, transform.position, transform.rotation);
 
 
-        Destroy(Coco, 15f) ;
+        Destroy(Coco, 15f);
     }
 }
 

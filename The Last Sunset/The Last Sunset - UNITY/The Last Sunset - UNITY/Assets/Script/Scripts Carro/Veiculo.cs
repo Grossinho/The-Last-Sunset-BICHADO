@@ -6,12 +6,12 @@ public class Veiculo : MonoBehaviour
 {
     public Transform[] MeshRodas;
     public WheelCollider[] ColisorRodas;
-    [SerializeField] float Velocidade, pesoVeiculo = 1500;
-    private float angulo, direcao;
+    public CarroMafia mafia;
     private Rigidbody corpoRigido;
+    private float angulo, direcao;
+    [SerializeField] float Velocidade, pesoVeiculo = 1500;
     [SerializeField] float limiteLateral;
     [SerializeField] float rotationZ, sensitivityZ, curva;
-    
 
    
     
@@ -85,6 +85,16 @@ public class Veiculo : MonoBehaviour
         rotationZ = Mathf.Clamp(rotationZ, -45, 45);
 
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationZ, transform.localEulerAngles.z) * Time.deltaTime * curva;
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Veiculo"))
+            Velocidade = 40f;
+
+        if (collision.gameObject.CompareTag("Mafia"))
+            mafia.CapotaMafia();
     }
 
 }
