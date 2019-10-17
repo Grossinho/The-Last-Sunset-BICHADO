@@ -11,17 +11,17 @@ public class camera : MonoBehaviour
 
     public GameObject player;
 
-    public Vector3 offset;
+    public float offset;
     // Start is called before the first frame update
     void Start()
     {
 
-        offset = transform.position - player.transform.position;
+        offset = transform.position.z - player.transform.position.z;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = offset + player.transform.position;
+        transform.position = new Vector3(transform.position.x, transform.position.y,offset + player.transform.position.z);
     }
 }
