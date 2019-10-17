@@ -704,7 +704,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5618115646662747729}
   - component: {fileID: 2557355931351452459}
-  - component: {fileID: 5326993399019005152}
   - component: {fileID: 4018192485736018999}
   m_Layer: 0
   m_Name: Carro01
@@ -756,19 +755,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &5326993399019005152
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8911734925618795586}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0320807, y: 1.4089003, z: 5.1112843}
-  m_Center: {x: 0.03385389, y: 0.72159815, z: -0.016151309}
 --- !u!54 &4018192485736018999
 Rigidbody:
   m_ObjectHideFlags: 0
