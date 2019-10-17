@@ -8,10 +8,10 @@ public class GameController : MonoBehaviour
     [SerializeField] Text textoDistancia, textoMusica;
     [SerializeField] RectTransform posTextoMusica;
     [SerializeField] Transform carroPos;
-    [SerializeField] float aumentoDistancia;
+    [SerializeField] float aumentoDistancia, velocidadeTexto;
     [SerializeField] AudioSource aud;
     float distancia;
-    Vector3 posInicial;
+    Vector3 posInicial, textoPosInicial;
     [SerializeField] float tempo = 3;
 
    
@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
         textoMusica.text = "Colete fitas para ouvir alguma coisa!";
         posInicial = carroPos.position;
 
+        textoPosInicial = textoMusica.transform.localPosition;
         
         carroMafia1.enabled = false;
         carroMafia2.enabled = false;
@@ -38,15 +39,19 @@ public class GameController : MonoBehaviour
     }
     private void Update()
     {
-        distancia = Mathf.Round(Vector3.Distance(posInicial, carroPos.position) * aumentoDistancia) ;
+        distancia = Mathf.Round(Vector3.Distance(posInicial, carroPos.position) * aumentoDistancia);
         textoDistancia.text = distancia.ToString();
 
         textoMusica.text = aud.clip.ToString();
-        Vector3 oi = new Vector3(posTextoMusica.position.x + Time.fixedDeltaTime, posTextoMusica.position.y, posTextoMusica.position.z);
-        posTextoMusica.position = oi;
-        
+        textoMusica.transform.localPosition += new Vector3(-velocidadeTexto * Time.deltaTime, 0, 0);
 
-        if(!carroMafia1.enabled && distancia >= tempo )
+        if (textoMusica.transform.localPosition.x < textoPosInicial.x - textoMusica.text.Length * 13)
+        {
+            textoMusica.transform.localPosition = textoPosInicial;
+        }
+
+
+        if (!carroMafia1.enabled && distancia >= tempo )
         {
             
             carroMafia1.enabled = true;
@@ -56,6 +61,10 @@ public class GameController : MonoBehaviour
             carroMafia5.enabled = true;
             coliderCarroMafia.enabled = true;
         }
+
+
+
+
     }
 
 
