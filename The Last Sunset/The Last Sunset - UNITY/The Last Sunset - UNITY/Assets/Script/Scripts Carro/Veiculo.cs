@@ -6,12 +6,12 @@ public class Veiculo : MonoBehaviour
 {
     public Transform[] MeshRodas;
     public WheelCollider[] ColisorRodas;
-    [SerializeField] float Velocidade, pesoVeiculo = 1500;
-    private float angulo, direcao;
+    public CarroMafia mafia;
     private Rigidbody corpoRigido;
+    private float angulo, direcao;
+    [SerializeField] float Velocidade, pesoVeiculo = 1500;
     [SerializeField] float limiteLateral;
     [SerializeField] float rotationZ, sensitivityZ, curva;
-    
 
    
     
@@ -91,8 +91,10 @@ public class Veiculo : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Veiculo"))
-        Velocidade = 40f;
+            Velocidade = 40f;
 
+        if (collision.gameObject.CompareTag("Mafia"))
+            mafia.CapotaMafia();
     }
 
 }
