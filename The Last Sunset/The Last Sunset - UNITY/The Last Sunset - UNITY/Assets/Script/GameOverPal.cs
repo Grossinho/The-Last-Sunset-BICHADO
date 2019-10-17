@@ -14,13 +14,13 @@ public class GameOverPal : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        /*
+        
         if (collision.gameObject.CompareTag("Player"))
         {
             Time.timeScale = 0;
             SceneManager.LoadScene("Game Over");
         }
-   */
+   
            
     }
 

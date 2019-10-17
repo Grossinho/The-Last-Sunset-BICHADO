@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 1029675560}
   m_Layer: 0
   m_Name: MafiaCarro
-  m_TagString: Untagged
+  m_TagString: Mafia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -330,9 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f2d36d088470b74cb7276d688a5366e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   velo: 50
-  colide: 0
 --- !u!1 &7520939560607805496
 GameObject:
   m_ObjectHideFlags: 0

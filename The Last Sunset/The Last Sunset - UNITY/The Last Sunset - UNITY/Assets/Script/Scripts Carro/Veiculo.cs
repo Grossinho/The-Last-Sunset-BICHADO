@@ -6,7 +6,7 @@ public class Veiculo : MonoBehaviour
 {
     public Transform[] MeshRodas;
     public WheelCollider[] ColisorRodas;
-    public CarroMafia mafia;
+    private GameObject mafia;
     private Rigidbody corpoRigido;
     private float angulo, direcao;
     [SerializeField] float Velocidade, pesoVeiculo = 1500;
@@ -20,10 +20,13 @@ public class Veiculo : MonoBehaviour
     {
         corpoRigido = GetComponent<Rigidbody>();
         corpoRigido.mass = pesoVeiculo;
-
+ 
     }
     void Update()
     {
+        if (mafia == null)
+            mafia = GameObject.FindWithTag("Mafia");
+
         corpoRigido.velocity = transform.forward * Velocidade;
         Velocidade += 0.5f * Time.deltaTime;
         
@@ -94,7 +97,7 @@ public class Veiculo : MonoBehaviour
             Velocidade = 40f;
 
         if (collision.gameObject.CompareTag("Mafia"))
-            mafia.CapotaMafia();
+            mafia.GetComponent<CarroMafia>().CapotaMafia();
     }
 
 }

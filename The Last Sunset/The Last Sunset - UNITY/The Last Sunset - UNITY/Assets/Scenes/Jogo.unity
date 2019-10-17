@@ -4006,7 +4006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1029675560, guid: 591193480489e4d49a053cb82a0bacec, type: 3}
       propertyPath: velo
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2256160461362271740, guid: 591193480489e4d49a053cb82a0bacec,
         type: 3}
@@ -5477,7 +5477,6 @@ MonoBehaviour:
   - {fileID: 5815383384517442992}
   - {fileID: 5815383386451222344}
   - {fileID: 5815383386517069928}
-  mafia: {fileID: 0}
   Velocidade: 50
   pesoVeiculo: 1000
   limiteLateral: 6.44
@@ -5530,7 +5529,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 5}
+  m_Size: {x: 2, y: 1, z: 4.7}
   m_Center: {x: 0, y: 0.53, z: 0}
 --- !u!4 &5815383385379482334
 Transform:
