@@ -18,19 +18,19 @@ public class CarroMafia : MonoBehaviour
     {
         capotado = false;
         rgb = GetComponent<Rigidbody>();
-        rgb.velocity = transform.forward * velo;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (capotado)
-            transform.RotateAround(Vector3.zero, Vector3.up, 20 * Time.deltaTime);
+        if (!capotado)
+            rgb.velocity = transform.forward * velo;
+        else
+            rgb.velocity -= Vector3.zero;
     }
 
     public void CapotaMafia()
-    {
-        rgb.velocity = transform.forward * 0;
+    {       
         capotado = true;
     }
 }
