@@ -9,15 +9,14 @@ public class Load : MonoBehaviour
     public Button m_Button;
 
     void Start()
-    {
-        // Chame a função LoadButton () quando o usuário clicar neste botão
-        m_Button.onClick.AddListener(LoadButton);
+    {        
+        StartCoroutine(LoadScene());
     }
 
     void LoadButton()
     {
         // Começa a carregar a cena de forma assíncrona e gera a barra de progresso
-        StartCoroutine(LoadScene());
+        //StartCoroutine(LoadScene());
     }
 
     IEnumerator LoadScene()
