@@ -5,34 +5,48 @@ using UnityEngine.SceneManagement;
 
 public class Load : MonoBehaviour
 {
-    public GameObject loadingObj;
-    public Slider slider;
+    public Text m_Text;
+    public Button m_Button;
 
-    AsyncOperation async;
-
-    public void LoadScene()
+    void Start()
     {
-        StartCoroutine(loading());
+        // Chame a função LoadButton () quando o usuário clicar neste botão
+        m_Button.onClick.AddListener(LoadButton);
     }
 
-    IEnumerator loading()
+    void LoadButton()
     {
-        loadingObj.SetActive(true);
-        async = SceneManager.LoadSceneAsync(0);
-        async.allowSceneActivation = false;
+        // Começa a carregar a cena de forma assíncrona e gera a barra de progresso
+        StartCoroutine(LoadScene());
+    }
 
-        while (async.isDone == false)
+    IEnumerator LoadScene()
+    {
+        yield return null;
+
+        // Comece a carregar a cena que você especificar
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Jogo");
+        // Não deixe a cena ser ativada até que você 
+        asyncOperation.allowSceneActivation = false;
+        Debug.Log("Pro :" + asyncOperation.progress);
+        // Quando o carregamento ainda está em andamento, produza a barra de texto e progresso
+        while (!asyncOperation.isDone)
         {
-            slider.value = async.progress;
-            if (async.progress == 0.9f)
+            // gera o progresso atual
+            m_Text.text = "Carregando: " + (asyncOperation.progress * 100) + "%";
+
+            // Verifique se o carregamento terminou 
+            if (asyncOperation.progress >= 0.9f)
             {
-                slider.value = 1f;
-                async.allowSceneActivation = true;
+                /// Altere o texto para mostrar que a cena está pronta 
+                m_Text.text = "Pressione Espaço para continuar";
+                // Espere você pressionar a tecla espaço para ativar a cena 
+                if (Input.GetKeyDown(KeyCode.Space))
+                    // Ativa a cena 
+                    asyncOperation.allowSceneActivation = true;
             }
 
             yield return null;
         }
     }
-
-
 }
