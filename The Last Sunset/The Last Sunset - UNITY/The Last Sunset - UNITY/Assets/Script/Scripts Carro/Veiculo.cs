@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 [RequireComponent(typeof(Rigidbody))]
 public class Veiculo : MonoBehaviour
 {
@@ -15,14 +17,24 @@ public class Veiculo : MonoBehaviour
 
     bool perdaVelo = false;
 
-   
-    
+    public Image BarraNitro;
+    [Range(20, 500)]
+    public float NitroCheio = 100, velocidadeNitro = 250;
+    [HideInInspector]
+    public float NitroAtual;
+    private bool semNitro = false;
+    private float velocidadeCaminhando, velocidadeCorrendo;
+    public TrailRenderer luz1;
+    public TrailRenderer luz2;
+
+
+
 
     void Start()
     {
         corpoRigido = GetComponent<Rigidbody>();
         corpoRigido.mass = pesoVeiculo;
- 
+        luz1.enabled = false;
     }
     void Update()
     {
@@ -45,6 +57,8 @@ public class Veiculo : MonoBehaviour
 
 
         colisaoLateral();
+        SistemaDeNitro();
+        AplicaBarra();
 
     }
     void FixedUpdate()
@@ -90,6 +104,7 @@ public class Veiculo : MonoBehaviour
 
     void perdeVelAcostamento()
     {
+        perdaVelo = true;
         if (perdaVelo == true && Velocidade > 30f)
         {
             Velocidade -= 2f;
@@ -139,6 +154,47 @@ public class Veiculo : MonoBehaviour
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationZ, transform.localEulerAngles.z) * Time.deltaTime * curva;
     }
 
+
+
+    void SistemaDeNitro()
+    {
+        float multEuler = ((1 / NitroCheio) * NitroAtual);
+        if (NitroAtual >= NitroCheio)
+        {
+            NitroAtual = NitroCheio;
+        }
+        else
+        {
+            NitroAtual += Time.deltaTime * ( Velocidade / 50) * Mathf.Pow(2.718f, multEuler);
+        }
+        if (NitroAtual <= 0)
+        {
+            NitroAtual = 0;
+            semNitro = true;
+        }
+        if (semNitro == true && NitroAtual >= (NitroCheio * 0.15f))
+        {
+            semNitro = false;
+        }
+        if (Input.GetKey(KeyCode.Space) && semNitro == false)
+        {
+            NitroAtual -= Time.deltaTime * (Velocidade / 3) * Mathf.Pow(2.718f, multEuler);
+            Velocidade += 0.1f;
+            if (NitroAtual <= 0)
+            {
+                NitroAtual = 0;
+                semNitro = true;
+            }
+            
+        }
+
+        
+    }
+
+    void AplicaBarra()
+    {
+        BarraNitro.fillAmount = ((1 / NitroCheio) * NitroAtual);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
