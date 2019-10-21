@@ -11,4 +11,8 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void Despause ()
+    {
+        Time.timeScale = 1;
+    }
 }
