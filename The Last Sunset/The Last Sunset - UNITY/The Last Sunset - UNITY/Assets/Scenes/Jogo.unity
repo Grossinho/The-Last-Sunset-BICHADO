@@ -5735,7 +5735,7 @@ MonoBehaviour:
   - {fileID: 5815383386517069928}
   Velocidade: 50
   pesoVeiculo: 1000
-  limiteLateral: 6.44
+  limiteLateral: 5.9
   rotationZ: 0
   sensitivityZ: 1.5
   curva: 10
