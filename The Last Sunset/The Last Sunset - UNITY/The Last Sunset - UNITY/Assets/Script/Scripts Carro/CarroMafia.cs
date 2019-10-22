@@ -26,7 +26,7 @@ public class CarroMafia : MonoBehaviour
         if (!capotado)
             rgb.velocity = transform.forward * velo;
         else
-            rgb.velocity -= Vector3.zero;
+            rgb.velocity = Vector3.zero;
     }
 
     public void CapotaMafia()
