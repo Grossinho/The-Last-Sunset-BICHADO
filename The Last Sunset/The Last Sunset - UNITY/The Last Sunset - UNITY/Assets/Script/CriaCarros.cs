@@ -5,11 +5,11 @@ using UnityEngine;
 public class CriaCarros : MonoBehaviour
 {
 
-    [SerializeField] List <Transform> pos;
-   
+    [SerializeField] List <Transform> pos;  
     [SerializeField] List <GameObject> carros;
     [SerializeField] GameObject Fita;
     [SerializeField] Transform spawnFita;
+    [SerializeField] float VelocidadeObstaculo;
 
 
 

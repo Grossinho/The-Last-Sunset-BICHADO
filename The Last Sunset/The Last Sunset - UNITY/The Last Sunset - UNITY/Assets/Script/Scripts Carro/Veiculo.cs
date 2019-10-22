@@ -34,7 +34,6 @@ public class Veiculo : MonoBehaviour
     {
         corpoRigido = GetComponent<Rigidbody>();
         corpoRigido.mass = pesoVeiculo;
-        luz1.enabled = false;
     }
     void Update()
     {
