@@ -4129,6 +4129,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5160606088156269205, guid: 591193480489e4d49a053cb82a0bacec,
+        type: 3}
+      propertyPath: m_TagString
+      value: Veiculo
+      objectReference: {fileID: 0}
     - target: {fileID: 6940560476946751793, guid: 591193480489e4d49a053cb82a0bacec,
         type: 3}
       propertyPath: m_Size.y
@@ -4231,7 +4236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1029675560, guid: 591193480489e4d49a053cb82a0bacec, type: 3}
       propertyPath: velo
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2256160461362271740, guid: 591193480489e4d49a053cb82a0bacec,
         type: 3}
