@@ -4231,7 +4231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1029675560, guid: 591193480489e4d49a053cb82a0bacec, type: 3}
       propertyPath: velo
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2256160461362271740, guid: 591193480489e4d49a053cb82a0bacec,
         type: 3}
@@ -4920,7 +4920,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063769059}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 601bbcbfe7dfbd54d8f27b61c1ead2d7, type: 3}
   m_Name: 
@@ -4934,7 +4934,6 @@ MonoBehaviour:
   - {fileID: 5191394523794610367, guid: 5189317effdc4c8438f075eb60cead9a, type: 3}
   Fita: {fileID: 2723733137269976967, guid: 200238acbd56445478595673d8efa6a7, type: 3}
   spawnFita: {fileID: 10743436424521309}
-  VelocidadeObstaculo: 0
   instancia: {fileID: 0}
 --- !u!4 &2063769061
 Transform:
@@ -5736,7 +5735,7 @@ MonoBehaviour:
   - {fileID: 5815383386517069928}
   Velocidade: 50
   pesoVeiculo: 1000
-  limiteLateral: 6.2
+  limiteLateral: 5.9
   rotationZ: 0
   sensitivityZ: 1.5
   curva: 10
@@ -5793,8 +5792,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 4.7}
-  m_Center: {x: 0, y: 0.53, z: 0}
+  m_Size: {x: 1.76, y: 1, z: 4.7}
+  m_Center: {x: 0, y: 0.66, z: -0.17}
 --- !u!114 &5815383384578806303
 MonoBehaviour:
   m_ObjectHideFlags: 0
