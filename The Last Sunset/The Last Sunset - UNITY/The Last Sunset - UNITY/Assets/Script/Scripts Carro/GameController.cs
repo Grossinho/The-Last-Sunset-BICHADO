@@ -10,16 +10,12 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform carroPos;
     [SerializeField] float aumentoDistancia, velocidadeTexto;
     [SerializeField] AudioSource aud;
-    float distancia;
+    float distancia, RecordAtual;
     Vector3 posInicial, textoPosInicial;
     [SerializeField] float tempo = 3;
 
    
-    [SerializeField] MeshRenderer carroMafia1;
-    [SerializeField] MeshRenderer carroMafia2;
-    [SerializeField] MeshRenderer carroMafia3;
-    [SerializeField] MeshRenderer carroMafia4;
-    [SerializeField] MeshRenderer carroMafia5;
+    [SerializeField] MeshRenderer carroMafia1, carroMafia2, carroMafia3, carroMafia4, carroMafia5;
     [SerializeField] Collider coliderCarroMafia;
    
     private void Start()
@@ -41,6 +37,10 @@ public class GameController : MonoBehaviour
     {
         distancia = Mathf.Round(Vector3.Distance(posInicial, carroPos.position) * aumentoDistancia);
         textoDistancia.text = distancia.ToString();
+        if (distancia > RecordAtual)
+        {
+            SaveRecord(distancia);
+        }
 
         textoMusica.text = aud.clip.ToString();
         textoMusica.transform.localPosition += new Vector3(-velocidadeTexto * Time.deltaTime, 0, 0);
@@ -61,13 +61,17 @@ public class GameController : MonoBehaviour
             carroMafia5.enabled = true;
             coliderCarroMafia.enabled = true;
         }
-
-
-
-
     }
 
+    void SaveRecord(float recorde)
+    {
+        PlayerPrefs.SetFloat("Record", recorde);
+    }
 
+    void LoadRecord()
+    {
+        RecordAtual = PlayerPrefs.GetFloat("Record");
+    }
 }
 
 
