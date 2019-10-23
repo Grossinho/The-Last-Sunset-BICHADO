@@ -2334,14 +2334,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970548999}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.3, z: -172.5}
+  m_LocalRotation: {x: 0.04773478, y: -0, z: -0, w: 0.99886006}
+  m_LocalPosition: {x: 0, y: 4.76, z: -172.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6203445511752094906}
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.472, y: 0, z: 0}
 --- !u!81 &970548996
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2406,6 +2406,8 @@ GameObject:
   - component: {fileID: 970548996}
   - component: {fileID: 970548992}
   - component: {fileID: 970549000}
+  - component: {fileID: 970549002}
+  - component: {fileID: 970549001}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2427,6 +2429,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5815383384578806301}
   offset: 0
+--- !u!114 &970549001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970548999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32187365ced0c42219cde2b57c99b323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    threshold: 0.9
+    softKnee: 0.5
+    radius: 2
+    intensity: 0.7
+    highQuality: 1
+    antiFlicker: 0
+    dirtTexture: {fileID: 0}
+    dirtIntensity: 2.5
+  m_Shader: {fileID: 4800000, guid: e45d4f28262b04d10a075856ab5fdb5e, type: 3}
+--- !u!114 &970549002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970548999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704d27b9a5b954ee0a0d9bc010c245a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _settings:
+    shutterAngle: 270
+    sampleCount: 10
+    frameBlending: 0
+  _reconstructionShader: {fileID: 4800000, guid: 7ea8cfee2809541fa81c5ed422ded933,
+    type: 3}
+  _frameBlendingShader: {fileID: 4800000, guid: 83da3aecb8b462f498946f5198cbd58e,
+    type: 3}
 --- !u!1 &979461297
 GameObject:
   m_ObjectHideFlags: 0
@@ -4925,7 +4969,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063769059}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 601bbcbfe7dfbd54d8f27b61c1ead2d7, type: 3}
   m_Name: 
@@ -4939,6 +4983,7 @@ MonoBehaviour:
   - {fileID: 5191394523794610367, guid: 5189317effdc4c8438f075eb60cead9a, type: 3}
   Fita: {fileID: 2723733137269976967, guid: 200238acbd56445478595673d8efa6a7, type: 3}
   spawnFita: {fileID: 10743436424521309}
+  VelocidadeObstaculo: 0
   instancia: {fileID: 0}
 --- !u!4 &2063769061
 Transform:
@@ -5027,7 +5072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &1099047295781594761
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5191,7 +5236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2441378166202626330
 GameObject:
   m_ObjectHideFlags: 0
@@ -5473,7 +5518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &4330967400250647468
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6255,7 +6300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6873560998512052234
 Transform:
   m_ObjectHideFlags: 0
