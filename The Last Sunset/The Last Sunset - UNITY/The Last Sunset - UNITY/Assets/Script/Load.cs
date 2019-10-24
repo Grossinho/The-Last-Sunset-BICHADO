@@ -31,7 +31,7 @@ public class Load : MonoBehaviour
         while (!asyncOperation.isDone)
         {
             // gera o progresso atual
-            m_Text.text = "Carregando: " + (asyncOperation.progress * 100) + "%";
+            //m_Text.text = "Carregando: " + (asyncOperation.progress * 100) + "%";
 
             // Verifique se o carregamento terminou 
             if (asyncOperation.progress >= 0.9f)

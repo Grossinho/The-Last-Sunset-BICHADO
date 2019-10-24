@@ -19,9 +19,7 @@ public class GameOverPal : MonoBehaviour
         {
             Time.timeScale = 0;
             SceneManager.LoadScene("Game Over");
-        }
-   
-           
+        }           
     }
 
 }
