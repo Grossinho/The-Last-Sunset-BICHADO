@@ -24,14 +24,13 @@ public class Veiculo : MonoBehaviour
     public float NitroAtual;
     private bool semNitro = false;
     private float velocidadeCaminhando, velocidadeCorrendo;
-    public TrailRenderer luz1;
-    public TrailRenderer luz2;
 
 
 
 
     void Start()
     {
+       
         corpoRigido = GetComponent<Rigidbody>();
         corpoRigido.mass = pesoVeiculo;
         
@@ -42,7 +41,7 @@ public class Veiculo : MonoBehaviour
             mafia = GameObject.FindWithTag("Mafia");
 
         corpoRigido.velocity = transform.forward * Velocidade;
-        Velocidade += 2f* Time.deltaTime;
+        Velocidade += 1f* Time.deltaTime;
         
 
         direcao = Input.GetAxis("Horizontal");
@@ -180,15 +179,28 @@ public class Veiculo : MonoBehaviour
         {
             NitroAtual -= Time.deltaTime * (Velocidade / 3) * Mathf.Pow(2.718f, multEuler);
             Velocidade += 0.1f;
+            GameController.instancia.nitro(3.0f);
+            GameController.instancia.zom(true);
+
             if (NitroAtual <= 0)
             {
                 NitroAtual = 0;
                 semNitro = true;
+                GameController.instancia.nitro(0f);
+                GameController.instancia.zom(false);
+               
             }
             
         }
 
-        
+        if (!Input.GetKeyDown(KeyCode.Space))
+        {
+            
+            GameController.instancia.zom(false);
+
+        }
+
+
     }
 
     void AplicaBarra()

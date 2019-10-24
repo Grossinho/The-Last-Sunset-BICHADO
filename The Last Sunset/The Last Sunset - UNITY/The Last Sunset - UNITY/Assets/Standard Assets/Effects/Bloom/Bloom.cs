@@ -240,6 +240,11 @@ namespace UnityStandardAssets.CinematicEffects
             RenderTexture.ReleaseTemporary(prefiltered);
         }
 
+        public void setIntensity(float intensidade )
+        {
+            this.settings.intensity = intensidade;
+        }
+
         #endregion
     }
 }

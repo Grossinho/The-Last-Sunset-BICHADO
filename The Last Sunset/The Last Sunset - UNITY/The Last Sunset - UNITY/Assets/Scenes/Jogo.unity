@@ -2408,6 +2408,7 @@ GameObject:
   - component: {fileID: 970549000}
   - component: {fileID: 970549002}
   - component: {fileID: 970549001}
+  - component: {fileID: 970549003}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2442,10 +2443,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings:
-    threshold: 0.9
-    softKnee: 0.5
-    radius: 2
-    intensity: 0.7
+    threshold: 1.53
+    softKnee: 0.69
+    radius: 3.5
+    intensity: 0
     highQuality: 1
     antiFlicker: 0
     dirtTexture: {fileID: 0}
@@ -2466,11 +2467,45 @@ MonoBehaviour:
   _settings:
     shutterAngle: 270
     sampleCount: 10
-    frameBlending: 0
+    frameBlending: 0.09
   _reconstructionShader: {fileID: 4800000, guid: 7ea8cfee2809541fa81c5ed422ded933,
     type: 3}
   _frameBlendingShader: {fileID: 4800000, guid: 83da3aecb8b462f498946f5198cbd58e,
     type: 3}
+--- !u!114 &970549003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970548999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5335a7357baa3489a469d0ca0f40f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distortion:
+    enabled: 1
+    amount: 0
+    centerX: 0
+    centerY: 0
+    amountX: 1
+    amountY: 1
+    scale: 1
+  vignette:
+    enabled: 0
+    color: {r: 0, g: 0, b: 0, a: 1}
+    center: {x: 0.5, y: 0.5}
+    intensity: 1.4
+    smoothness: 0.8
+    roundness: 1
+    blur: 0
+    desaturate: 0
+  chromaticAberration:
+    enabled: 0
+    color: {r: 0, g: 1, b: 0, a: 1}
+    amount: 0
+  m_Shader: {fileID: 4800000, guid: 136ab50fe2b9ad64d9c22adc3668abb7, type: 3}
 --- !u!1 &979461297
 GameObject:
   m_ObjectHideFlags: 0
@@ -5025,6 +5060,8 @@ MonoBehaviour:
   carroMafia4: {fileID: 1945004616}
   carroMafia5: {fileID: 781744203}
   coliderCarroMafia: {fileID: 1551484228}
+  zoom: 80
+  normal: 60
 --- !u!4 &10743436424521309
 Transform:
   m_ObjectHideFlags: 0
@@ -5793,8 +5830,6 @@ MonoBehaviour:
   NitroCheio: 100
   velocidadeNitro: 250
   NitroAtual: 0
-  luz1: {fileID: 0}
-  luz2: {fileID: 0}
 --- !u!4 &5815383384578806300
 Transform:
   m_ObjectHideFlags: 0

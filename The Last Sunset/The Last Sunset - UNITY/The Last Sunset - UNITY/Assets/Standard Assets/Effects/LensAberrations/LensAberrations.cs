@@ -333,5 +333,10 @@ namespace UnityStandardAssets.CinematicEffects
 
             m_RTU.ReleaseAllTemporaryRenderTextures();
         }
+
+        public void setDistortion(float intensidade)
+        {
+            this.distortion.amount = intensidade;
+        }
     }
 }
