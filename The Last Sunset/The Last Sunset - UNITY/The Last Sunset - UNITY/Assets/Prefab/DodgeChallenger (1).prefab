@@ -1477,6 +1477,7 @@ GameObject:
   - component: {fileID: 2084838394622200206}
   - component: {fileID: 6083993635289055790}
   - component: {fileID: 6655295831069974395}
+  - component: {fileID: 8702688341953857392}
   m_Layer: 0
   m_Name: DodgeChallenger (1)
   m_TagString: Veiculo
@@ -1582,8 +1583,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.193186, y: 1, z: 2.7540715}
+  m_Size: {x: 6.29, y: 0.79, z: 2.21}
   m_Center: {x: -0.0965929, y: 0, z: 0.011020899}
+--- !u!114 &8702688341953857392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3077520546617605021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d238f8c7ed52b647a5c3e67ee7468c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3137800827256707216
 GameObject:
   m_ObjectHideFlags: 0

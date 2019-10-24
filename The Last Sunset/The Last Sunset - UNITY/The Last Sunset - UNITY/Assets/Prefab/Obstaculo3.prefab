@@ -1,48 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &3461340151714648811
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855280830928762432}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.74, y: 0.88, z: 4.19}
-  m_Center: {x: -0.015955983, y: 0.6542039, z: -0.031087875}
---- !u!114 &6716600622783943820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855280830928762432}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d238f8c7ed52b647a5c3e67ee7468c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8126455809987175159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855280830928762432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0501268d8b5abaa4c9dc6d92d704ee43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fogo: {fileID: 0}
-  explosao: {fileID: 4749116554879860149, guid: 5ef3b6d0bd4d4a64baae0ca5381f127c,
-    type: 3}
-  tempoParaEstourar: 0.5
-  raioDaExplosao: 5
-  forcaExp: 5
 --- !u!1 &5191394523794610367
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,31 +38,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2328709297862367044}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Size.z
-      value: 4.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Size.y
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8911734925618795586, guid: 34204b41e4057724488b26f96d94c82b,
         type: 3}
       propertyPath: m_Name
       value: Carro01
-      objectReference: {fileID: 0}
-    - target: {fileID: 8911734925618795586, guid: 34204b41e4057724488b26f96d94c82b,
-        type: 3}
-      propertyPath: m_TagString
-      value: Veiculo
       objectReference: {fileID: 0}
     - target: {fileID: 5618115646662747729, guid: 34204b41e4057724488b26f96d94c82b,
         type: 3}
@@ -164,12 +100,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34204b41e4057724488b26f96d94c82b, type: 3}
---- !u!1 &855280830928762432 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8911734925618795586, guid: 34204b41e4057724488b26f96d94c82b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8102616541230981634}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4433170112377472083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5618115646662747729, guid: 34204b41e4057724488b26f96d94c82b,

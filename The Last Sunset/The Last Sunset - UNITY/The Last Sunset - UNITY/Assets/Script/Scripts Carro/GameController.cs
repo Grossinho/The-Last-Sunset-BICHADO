@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform carroPos;
     [SerializeField] float aumentoDistancia, velocidadeTexto;
     [SerializeField] AudioSource aud;
-    float distancia, RecordAtual;
+    float distancia;
     Vector3 posInicial, textoPosInicial;
     [SerializeField] float tempo = 3;
 
@@ -57,10 +57,6 @@ public class GameController : MonoBehaviour
     {
         distancia = Mathf.Round(Vector3.Distance(posInicial, carroPos.position) * aumentoDistancia);
         textoDistancia.text = distancia.ToString();
-        if (distancia > RecordAtual)
-        {
-            SaveRecord(distancia);
-        }
 
         textoMusica.text = aud.clip.ToString();
         textoMusica.transform.localPosition += new Vector3(-velocidadeTexto * Time.deltaTime, 0, 0);
@@ -83,14 +79,9 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void SaveRecord(float recorde)
+    public void SaveRecord()
     {
-        PlayerPrefs.SetFloat("Record", recorde);
-    }
-
-    void LoadRecord()
-    {
-        RecordAtual = PlayerPrefs.GetFloat("Record");
+        PlayerPrefs.SetFloat("Record", distancia);
     }
 
     public void nitro(float pot)

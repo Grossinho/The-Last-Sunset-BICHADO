@@ -778,7 +778,6 @@ GameObject:
   - component: {fileID: 8121050042618519701}
   - component: {fileID: 7055948937591809277}
   - component: {fileID: 7580712213481094128}
-  - component: {fileID: -7601734285780165109}
   m_Layer: 0
   m_Name: Obstaculo1
   m_TagString: Veiculo
@@ -865,29 +864,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141153881679964859}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d238f8c7ed52b647a5c3e67ee7468c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-7601734285780165109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141153881679964859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0501268d8b5abaa4c9dc6d92d704ee43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fogo: {fileID: 0}
-  explosao: {fileID: 4749116554879860149, guid: 5ef3b6d0bd4d4a64baae0ca5381f127c,
-    type: 3}
-  tempoParaEstourar: 2
-  raioDaExplosao: 5
-  forcaExp: 5
 --- !u!1 &146709836707750681
 GameObject:
   m_ObjectHideFlags: 0

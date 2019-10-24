@@ -16,7 +16,9 @@ public class GameOverPal : MonoBehaviour
     {
         
         if (collision.gameObject.CompareTag("Player"))
-        {
+        {            
+            GameController.instancia.SaveRecord();
+            Debug.Log(PlayerPrefs.GetFloat("Record"));
             Time.timeScale = 0;
             SceneManager.LoadScene("Game Over");
         }           

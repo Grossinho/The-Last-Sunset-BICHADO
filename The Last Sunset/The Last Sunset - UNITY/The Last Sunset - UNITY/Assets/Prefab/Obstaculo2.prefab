@@ -1,23 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &8746088225771690585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6915064848055496146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0501268d8b5abaa4c9dc6d92d704ee43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fogo: {fileID: 100008, guid: 7432ce044a5b60a4ca79c52e6f7aabc9, type: 3}
-  explosao: {fileID: 4749116554879860149, guid: 5ef3b6d0bd4d4a64baae0ca5381f127c,
-    type: 3}
-  tempoParaEstourar: 2
-  raioDaExplosao: 5
-  forcaExp: 5
 --- !u!1 &7062217677082158504
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,29 +98,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6655295831069974395, guid: 27cb9cb0ab164e94ea4aedad99bda25b,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 6.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 6655295831069974395, guid: 27cb9cb0ab164e94ea4aedad99bda25b,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 6655295831069974395, guid: 27cb9cb0ab164e94ea4aedad99bda25b,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 2.21
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27cb9cb0ab164e94ea4aedad99bda25b, type: 3}
---- !u!1 &6915064848055496146 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3077520546617605021, guid: 27cb9cb0ab164e94ea4aedad99bda25b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8449512074018084431}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7614574386593767361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2084838394622200206, guid: 27cb9cb0ab164e94ea4aedad99bda25b,
