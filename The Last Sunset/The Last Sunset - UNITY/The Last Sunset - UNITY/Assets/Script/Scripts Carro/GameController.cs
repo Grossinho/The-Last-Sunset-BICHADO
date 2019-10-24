@@ -10,9 +10,10 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform carroPos;
     [SerializeField] float aumentoDistancia, velocidadeTexto;
     [SerializeField] AudioSource aud;
-    float distancia, RecordAtual;
-    Vector3 posInicial, textoPosInicial;
     [SerializeField] float tempo = 3;
+    float distancia, RecordAtual; 
+    float[] recordes;
+    Vector3 posInicial, textoPosInicial;
 
    
     [SerializeField] MeshRenderer carroMafia1, carroMafia2, carroMafia3, carroMafia4, carroMafia5;
@@ -20,6 +21,7 @@ public class GameController : MonoBehaviour
    
     private void Start()
     {
+       
         textoMusica.text = "Colete fitas para ouvir alguma coisa!";
         posInicial = carroPos.position;
 
@@ -37,6 +39,7 @@ public class GameController : MonoBehaviour
     {
         distancia = Mathf.Round(Vector3.Distance(posInicial, carroPos.position) * aumentoDistancia);
         textoDistancia.text = distancia.ToString();
+        RecordAtual = PlayerPrefs.GetFloat("Record", 0);
         if (distancia > RecordAtual)
         {
             SaveRecord(distancia);
@@ -68,10 +71,6 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetFloat("Record", recorde);
     }
 
-    void LoadRecord()
-    {
-        RecordAtual = PlayerPrefs.GetFloat("Record");
-    }
 }
 
 
