@@ -75,7 +75,7 @@ public class CriaCarros : MonoBehaviour
 
 
 
-        veiculos.GetComponent<Transform>().Rotate(new Vector3(0, 180, 0));
+       // veiculos.GetComponent<Transform>().Rotate(new Vector3(0, 180, 0));
         //veiculos.GetComponent<Rigidbody>().velocity = transform.forward * 20f;
         //veiculos.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 150) * -50);
 
