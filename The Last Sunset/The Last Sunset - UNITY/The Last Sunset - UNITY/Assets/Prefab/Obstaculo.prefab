@@ -471,8 +471,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8776648875387388642}
-  - component: {fileID: 5749183981194322466}
   - component: {fileID: 6017175095451840364}
+  - component: {fileID: 4584090972513994251}
   m_Layer: 0
   m_Name: Obstaculo
   m_TagString: Untagged
@@ -495,19 +495,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5749183981194322466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1069117699194953960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8c757033ead964db403769a80a7b76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velo: 30
 --- !u!54 &6017175095451840364
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -524,6 +511,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &4584090972513994251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069117699194953960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82707c172942c14ca2327d76dada1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velo: 30
 --- !u!1 &1373100759563091022
 GameObject:
   m_ObjectHideFlags: 0
