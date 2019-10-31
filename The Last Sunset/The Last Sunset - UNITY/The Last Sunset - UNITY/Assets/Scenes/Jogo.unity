@@ -1709,6 +1709,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &682499643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7949177697326621502, guid: b5b57acf9912dc440941f61143f956a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3012627889237423242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &682499648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682499643}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.37, y: 1.03, z: 12.88}
+  m_Center: {x: 0, y: 1.25, z: 0}
 --- !u!1 &786799050
 GameObject:
   m_ObjectHideFlags: 0
@@ -4888,6 +4907,7 @@ MonoBehaviour:
   aumentoDistancia: 0.005
   velocidadeTexto: 100
   aud: {fileID: 8936775733529155200}
+  distancia: 0
   tempo: 3
   carroMafia1: {fileID: 4619116128287377415}
   carroMafia2: {fileID: 1254762772871043309}
@@ -5247,6 +5267,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012627890446939011, guid: b5b57acf9912dc440941f61143f956a2,
+        type: 3}
+      propertyPath: velo
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5b57acf9912dc440941f61143f956a2, type: 3}
@@ -5748,7 +5773,7 @@ MonoBehaviour:
   rotationZ: 0
   sensitivityZ: 1.5
   curva: 10
-  BarraNitro: {fileID: 387558962}
+  BarraNitro: {fileID: 1333718077}
   NitroCheio: 100
   velocidadeNitro: 250
   NitroAtual: 0

@@ -15,48 +15,28 @@ public class CriaCarros : MonoBehaviour
 
     [HideInInspector] public CriaCarros instancia;
 
-    float cronometro;
+    int KMAnterior;
+    int KMAtual;
     float geraFita;
 
-    
-    private void Awake()
+    private void Start()
     {
-        
-        if(instancia = null)
-        {
-            instancia = this;
-        }
-        else if(instancia != null)
-        {
-            Destroy(this);
-        }
-
+        KMAnterior = 0;
+        KMAtual = 0;
     }
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
 
-        cronometro += 1 * Time.deltaTime;
+        KMAtual = (int)GameController.instancia.distancia;
+
         geraFita += 1 * Time.deltaTime;
 
-        if (cronometro > 2)
+        if (KMAtual != KMAnterior)
         {
-
             RetornaCarro();
-            cronometro = 0;
-
+            KMAnterior = KMAtual;
         }
-        
 
         if (geraFita > 10)
         {
@@ -73,14 +53,7 @@ public class CriaCarros : MonoBehaviour
 
         GameObject veiculos = (GameObject)Instantiate(carros[Random.Range(0,carros.Count)], pos[Random.Range(0, pos.Count)].position, pos[0].rotation);
 
-
-
-       // veiculos.GetComponent<Transform>().Rotate(new Vector3(0, 180, 0));
-        //veiculos.GetComponent<Rigidbody>().velocity = transform.forward * 20f;
-        //veiculos.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, 150) * -50);
-
-
-
+                     
         Destroy(veiculos, 25f);
     }
 

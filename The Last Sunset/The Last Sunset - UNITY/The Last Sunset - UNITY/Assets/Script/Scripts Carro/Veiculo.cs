@@ -24,6 +24,7 @@ public class Veiculo : MonoBehaviour
     public float NitroAtual;
     private bool semNitro = false;
     private float velocidadeCaminhando, velocidadeCorrendo;
+    
 
 
 
@@ -164,7 +165,7 @@ public class Veiculo : MonoBehaviour
         }
         else
         {
-            NitroAtual += Time.deltaTime * ( Velocidade / 50) * Mathf.Pow(2.718f, multEuler);
+            NitroAtual += Time.deltaTime * ( Velocidade / 25) * Mathf.Pow(2.718f, multEuler);
         }
         if (NitroAtual <= 0)
         {
@@ -177,29 +178,22 @@ public class Veiculo : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space) && semNitro == false)
         {
+
             NitroAtual -= Time.deltaTime * (Velocidade / 3) * Mathf.Pow(2.718f, multEuler);
             Velocidade += 0.1f;
             GameController.instancia.nitro(3.0f);
             GameController.instancia.zom(true);
-
-            if (NitroAtual <= 0)
-            {
-                NitroAtual = 0;
-                semNitro = true;
+        }
+           else
+           {
+                
                 GameController.instancia.nitro(0f);
                 GameController.instancia.zom(false);
-               
-            }
+                
+           }
             
-        }
 
-        if (!Input.GetKeyDown(KeyCode.Space))
-        {
-            
-            GameController.instancia.zom(false);
-
-        }
-
+                    
 
     }
 

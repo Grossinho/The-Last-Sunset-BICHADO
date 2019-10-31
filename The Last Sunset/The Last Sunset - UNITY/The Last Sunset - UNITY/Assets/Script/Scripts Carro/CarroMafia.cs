@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CarroMafia : MonoBehaviour
 {
-    private bool capotado;
 
-    
 
+
+    float trocafaixa;
     
     Rigidbody rgb;
     [SerializeField] private float velo;
@@ -16,21 +16,28 @@ public class CarroMafia : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        capotado = false;
+        trocafaixa = transform.position.x;
         rgb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!capotado)
+        
             rgb.velocity = transform.forward * velo;
-        else
-            rgb.velocity = Vector3.zero;
+       
     }
 
     public void CapotaMafia()
     {       
-        capotado = true;
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Veiculo")) ;
+           
+           
+
+
     }
 }

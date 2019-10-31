@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform carroPos;
     [SerializeField] float aumentoDistancia, velocidadeTexto;
     [SerializeField] AudioSource aud;
-    float distancia;
+    public float distancia;
     Vector3 posInicial, textoPosInicial;
     [SerializeField] float tempo = 3;
 
@@ -105,7 +105,7 @@ public class GameController : MonoBehaviour
             cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, normal, Time.deltaTime * smooth);
             //lensAberrations.setDistortion(0);
         }
-
+        
     }
 }
 
