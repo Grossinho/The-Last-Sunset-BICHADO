@@ -16,7 +16,7 @@ public class Recorde : MonoBehaviour
     {
         for (int i = 1; i < 4; i++)
         {
-            recordes[i] = PlayerPrefs.GetFloat("Records", 0);
+            recordes[i] = PlayerPrefs.GetFloat("Record" + i.ToString(), 0);
            
         }
             
