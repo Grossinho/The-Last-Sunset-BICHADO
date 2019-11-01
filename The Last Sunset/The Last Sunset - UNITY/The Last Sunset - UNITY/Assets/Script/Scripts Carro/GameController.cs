@@ -51,7 +51,6 @@ public class GameController : MonoBehaviour
         carroMafia4.enabled = false;
         carroMafia5.enabled = false;
         coliderCarroMafia.enabled = false;
-
     }
     private void Update()
     {
@@ -82,6 +81,7 @@ public class GameController : MonoBehaviour
     public void SaveRecord()
     {
         PlayerPrefs.SetFloat("Record", distancia);
+        PlayerPrefs.Save();
     }
 
     public void nitro(float pot)
@@ -104,8 +104,7 @@ public class GameController : MonoBehaviour
         {
             cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, normal, Time.deltaTime * smooth);
             //lensAberrations.setDistortion(0);
-        }
-        
+        }        
     }
 }
 
