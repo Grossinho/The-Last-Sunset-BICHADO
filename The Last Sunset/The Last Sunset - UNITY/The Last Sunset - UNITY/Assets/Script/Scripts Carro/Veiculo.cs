@@ -213,8 +213,8 @@ public class Veiculo : MonoBehaviour
 
         }
 
-        if (collision.gameObject.CompareTag("Mafia"))
-            mafia.GetComponent<CarroMafia>().CapotaMafia();
+        
+           
     }
 
 }
