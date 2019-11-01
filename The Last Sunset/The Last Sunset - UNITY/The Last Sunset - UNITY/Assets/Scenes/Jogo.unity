@@ -5216,7 +5216,7 @@ PrefabInstance:
     - target: {fileID: 6344022831223443757, guid: b5b57acf9912dc440941f61143f956a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6344022831223443757, guid: b5b57acf9912dc440941f61143f956a2,
         type: 3}
@@ -5272,6 +5272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: velo
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012627890446939011, guid: b5b57acf9912dc440941f61143f956a2,
+        type: 3}
+      propertyPath: limiteLateral
+      value: 5.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5b57acf9912dc440941f61143f956a2, type: 3}
