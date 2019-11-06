@@ -24,7 +24,7 @@ public class Velocimetro : MonoBehaviour
 
     void Update()
     {
-        velocidade = _rigidbody.velocity.magnitude * 3.6f;
+       // velocidade = _rigidbody.velocity.magnitude * 3.6f;
         ponteiroEixoZ.transform.localEulerAngles = new Vector3(startEulerAngles.x, startEulerAngles.y, startEulerAngles.z + velocidade * angleFactor);
 
         if(velocidade < velocidadeAtual)
