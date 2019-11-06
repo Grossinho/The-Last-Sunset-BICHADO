@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 8776648875387388642}
   - component: {fileID: 6017175095451840364}
   - component: {fileID: 4584090972513994251}
+  - component: {fileID: -1435865459246784253}
   m_Layer: 0
   m_Name: Obstaculo
   m_TagString: Untagged
@@ -524,6 +525,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velo: 30
+--- !u!114 &-1435865459246784253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069117699194953960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d238f8c7ed52b647a5c3e67ee7468c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1373100759563091022
 GameObject:
   m_ObjectHideFlags: 0
