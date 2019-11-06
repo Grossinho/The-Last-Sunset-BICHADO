@@ -57,10 +57,10 @@ public class GameController : MonoBehaviour
         distancia = Mathf.Round(Vector3.Distance(posInicial, carroPos.position) * aumentoDistancia);
         textoDistancia.text = distancia.ToString();
 
-        textoMusica.text = aud.clip.ToString();
+        textoMusica.text = aud.clip.name.ToString();
         textoMusica.transform.localPosition += new Vector3(-velocidadeTexto * Time.deltaTime, 0, 0);
 
-        if (textoMusica.transform.localPosition.x < textoPosInicial.x - textoMusica.text.Length * 13)
+        if (textoMusica.transform.localPosition.x < textoPosInicial.x - textoMusica.text.Length * 15)
         {
             textoMusica.transform.localPosition = textoPosInicial;
         }
