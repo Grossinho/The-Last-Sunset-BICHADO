@@ -18,13 +18,14 @@ public class Veiculo : MonoBehaviour
     bool perdaVelo = false;
 
     public Image BarraNitro;
+    public Image Velocimetro;
     [Range(20, 500)]
     public float NitroCheio = 100, velocidadeNitro = 250;
     [HideInInspector]
     public float NitroAtual;
     private bool semNitro = false;
     private float velocidadeCaminhando, velocidadeCorrendo;
-    
+    [SerializeField] float tempo;
 
 
 
@@ -59,6 +60,7 @@ public class Veiculo : MonoBehaviour
         colisaoLateral();
         SistemaDeNitro();
         AplicaBarra();
+
 
     }
     void FixedUpdate()
@@ -191,15 +193,13 @@ public class Veiculo : MonoBehaviour
                 GameController.instancia.zom(false);
                 
            }
-            
-
-                    
 
     }
 
     void AplicaBarra()
     {
         BarraNitro.fillAmount = ((1 / NitroCheio) * NitroAtual);
+        Velocimetro.fillAmount = Velocidade  /tempo;
     }
 
     private void OnCollisionEnter(Collision collision)

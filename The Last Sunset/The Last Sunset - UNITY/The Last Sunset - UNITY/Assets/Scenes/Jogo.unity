@@ -2574,11 +2574,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: f7ae4d5f7e67b8b42afa57b44277766c, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillMethod: 0
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -4173,7 +4173,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
 --- !u!222 &1758959743
 CanvasRenderer:
@@ -5748,9 +5748,11 @@ MonoBehaviour:
   sensitivityZ: 1.5
   curva: 10
   BarraNitro: {fileID: 1758959742}
+  Velocimetro: {fileID: 1003694704}
   NitroCheio: 100
   velocidadeNitro: 250
   NitroAtual: 0
+  tempo: 200
 --- !u!4 &5815383384578806300
 Transform:
   m_ObjectHideFlags: 0
@@ -5779,7 +5781,6 @@ GameObject:
   - component: {fileID: 5815383384578806289}
   - component: {fileID: 5815383384578806290}
   - component: {fileID: 5815383384578806302}
-  - component: {fileID: 5815383384578806303}
   m_Layer: 0
   m_Name: Jogador
   m_TagString: Player
@@ -5800,19 +5801,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.76, y: 1, z: 4.7}
   m_Center: {x: 0, y: 0.66, z: -0.17}
---- !u!114 &5815383384578806303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5815383384578806301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c8c383a9b6b303409e50cae07c4aa33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  veloci: {fileID: 0}
 --- !u!4 &5815383385379482334
 Transform:
   m_ObjectHideFlags: 0
