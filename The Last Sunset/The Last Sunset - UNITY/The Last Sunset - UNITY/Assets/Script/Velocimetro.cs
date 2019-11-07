@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Velocimetro : MonoBehaviour
 {
-
-    public Transform ponteiroEixoZ;
-    public float angleFactor = -5f;
+    public Image veloci;  
     float velocidadeAtual;
 
     Vector3 startEulerAngles;
@@ -15,21 +14,17 @@ public class Velocimetro : MonoBehaviour
 
     void Start()
     {
-        startEulerAngles = ponteiroEixoZ.transform.localEulerAngles;
+        
         _rigidbody = GetComponent<Rigidbody>();
 
-        velocidadeAtual = _rigidbody.velocity.magnitude;
 
     }
 
     void Update()
     {
-       // velocidade = _rigidbody.velocity.magnitude * 3.6f;
-        ponteiroEixoZ.transform.localEulerAngles = new Vector3(startEulerAngles.x, startEulerAngles.y, startEulerAngles.z + velocidade * angleFactor);
+        velocidade = _rigidbody.velocity.magnitude * 3.6f;
 
-        if(velocidade < velocidadeAtual)
-        {
-            ponteiroEixoZ.transform.localEulerAngles = new Vector3(startEulerAngles.x, startEulerAngles.y, startEulerAngles.z + velocidade * angleFactor * Time.deltaTime);
-        }
+        veloci.fillAmount = 2/velocidade ;
+        
     }
 }
