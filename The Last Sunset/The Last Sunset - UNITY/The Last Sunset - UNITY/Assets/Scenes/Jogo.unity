@@ -2454,8 +2454,8 @@ MonoBehaviour:
   volumeLayer:
     serializedVersion: 2
     m_Bits: 32
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 1
+  stopNaNPropagation: 0
+  finalBlitToCameraTarget: 0
   antialiasingMode: 3
   temporalAntialiasing:
     jitterSpread: 0.1
@@ -4934,7 +4934,7 @@ MonoBehaviour:
   textoMusica: {fileID: 1471840569}
   posTextoMusica: {fileID: 1471840568}
   carroPos: {fileID: 5815383384578806300}
-  aumentoDistancia: 0.02
+  aumentoDistancia: 0.01
   velocidadeTexto: 70
   aud: {fileID: 8936775733529155200}
   distancia: 0
