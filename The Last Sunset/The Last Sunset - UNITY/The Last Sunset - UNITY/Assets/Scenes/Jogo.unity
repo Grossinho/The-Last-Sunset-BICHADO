@@ -2375,10 +2375,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings:
-    threshold: 1.53
-    softKnee: 0.69
-    radius: 3.5
-    intensity: 0
+    threshold: 1.9
+    softKnee: 0.19
+    radius: 1
+    intensity: 2.24
     highQuality: 1
     antiFlicker: 0
     dirtTexture: {fileID: 0}
@@ -2453,9 +2453,9 @@ MonoBehaviour:
   volumeTrigger: {fileID: 970548994}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 0
   stopNaNPropagation: 1
-  finalBlitToCameraTarget: 1
+  finalBlitToCameraTarget: 0
   antialiasingMode: 3
   temporalAntialiasing:
     jitterSpread: 0.1
@@ -4887,7 +4887,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063769059}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 601bbcbfe7dfbd54d8f27b61c1ead2d7, type: 3}
   m_Name: 
@@ -4934,7 +4934,7 @@ MonoBehaviour:
   textoMusica: {fileID: 1471840569}
   posTextoMusica: {fileID: 1471840568}
   carroPos: {fileID: 5815383384578806300}
-  aumentoDistancia: 0.005
+  aumentoDistancia: 0.01
   velocidadeTexto: 70
   aud: {fileID: 8936775733529155200}
   distancia: 0

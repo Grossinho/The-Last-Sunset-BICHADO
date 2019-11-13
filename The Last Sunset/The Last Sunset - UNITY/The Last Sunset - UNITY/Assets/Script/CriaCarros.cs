@@ -21,6 +21,9 @@ public class CriaCarros : MonoBehaviour
 
     private void Start()
     {
+
+        RetornaCarro();
+        Instantiate(Fita, new Vector3(spawnFita.position.x, spawnFita.position.y - 1.5f, spawnFita.position.z), Fita.transform.rotation);
         KMAnterior = 0;
         KMAtual = 0;
     }
@@ -38,7 +41,7 @@ public class CriaCarros : MonoBehaviour
             KMAnterior = KMAtual;
         }
 
-        if (geraFita > 10)
+        if (geraFita > 90)
         {
             Instantiate(Fita, new Vector3 (spawnFita.position.x, spawnFita.position.y - 1.5f, spawnFita.position.z), Fita.transform.rotation);
             geraFita = 0;
@@ -53,12 +56,8 @@ public class CriaCarros : MonoBehaviour
 
         GameObject veiculos = (GameObject)Instantiate(carros[Random.Range(0,carros.Count)], pos[Random.Range(0, pos.Count)].position, pos[0].rotation);
 
-                     
-        Destroy(veiculos, 25f);
+
     }
-
-
-    
 
 
 
