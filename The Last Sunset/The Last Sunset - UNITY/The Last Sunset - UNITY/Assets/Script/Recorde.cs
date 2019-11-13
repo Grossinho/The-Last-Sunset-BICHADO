@@ -12,12 +12,15 @@ public class Recorde : MonoBehaviour
     string[] nomes = new string[4]; 
     float RecordAtual;
     string nomeAtual;
+    int contador;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("AtualizaRecorde", 1, 1);
+        //PlayerPrefs.DeleteAll();
+        contador = 2;
+        InvokeRepeating("AtualizaRecorde", 0, 1);
     }
 
 
@@ -29,6 +32,8 @@ public class Recorde : MonoBehaviour
 
     void AtualizaRecorde()
     {
+        if (--contador <= 0) CancelInvoke("AtualizaRecorde");
+
         RecordAtual = PlayerPrefs.GetFloat("Record");
         nomeAtual = PlayerPrefs.GetString("Nome");
 
