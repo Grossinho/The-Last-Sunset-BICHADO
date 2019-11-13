@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour
 
     public void SaveRecord()
     {
-        PlayerPrefs.SetFloat("Record", distancia);
+        PlayerPrefs.SetFloat("newrecord", distancia);
     }
 
     public void nitro(float pot)
