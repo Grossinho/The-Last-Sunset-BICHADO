@@ -397,9 +397,11 @@ GameObject:
   - component: {fileID: 3927276204635077719}
   - component: {fileID: 1589648885138112714}
   - component: {fileID: 5304910377721481370}
-  - component: {fileID: 3012627890446939011}
+  - component: {fileID: -8195740072781538515}
+  - component: {fileID: 5094330254392113436}
+  - component: {fileID: -4576292546555077139}
   m_Layer: 0
-  m_Name: MafiaCarro 1
+  m_Name: Obstaculo4
   m_TagString: Veiculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -468,11 +470,11 @@ BoxCollider:
   m_GameObject: {fileID: 7949177697326621502}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.4708252, y: 1.9883027, z: 5.358612}
   m_Center: {x: 0.027282715, y: 1.3787429, z: -0.33784485}
---- !u!114 &3012627890446939011
+--- !u!114 &-8195740072781538515
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -481,7 +483,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 7949177697326621502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f2d36d088470b74cb7276d688a5366e, type: 3}
+  m_Script: {fileID: 11500000, guid: a8b8d834ab6767a46a7b4fbc2358851e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velo: 50
+--- !u!114 &5094330254392113436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7949177697326621502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d238f8c7ed52b647a5c3e67ee7468c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4576292546555077139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7949177697326621502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82707c172942c14ca2327d76dada1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velo: 30
