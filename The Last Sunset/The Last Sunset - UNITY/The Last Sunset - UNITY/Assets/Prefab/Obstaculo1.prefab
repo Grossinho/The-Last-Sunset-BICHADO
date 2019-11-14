@@ -5867,6 +5867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3936368093388506017}
+  - component: {fileID: 4602895389458529932}
   m_Layer: 0
   m_Name: Obstaculo1
   m_TagString: Untagged
@@ -5889,6 +5890,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4602895389458529932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084028677259204486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b8d834ab6767a46a7b4fbc2358851e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1113519305374315989
 GameObject:
   m_ObjectHideFlags: 0
@@ -44107,7 +44120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8c757033ead964db403769a80a7b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velo: 40
+  velo: 50
 --- !u!1 &7580921068975817374
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,6 +39,7 @@ public class Veiculo : MonoBehaviour
     }
     void Update()
     {
+
         if (mafia == null)
             mafia = GameObject.FindWithTag("Mafia");
 
@@ -61,6 +62,10 @@ public class Veiculo : MonoBehaviour
         SistemaDeNitro();
         AplicaBarra();
 
+        if(Velocidade >= 120)
+        {
+            Velocidade = 120;
+        }
 
     }
     void FixedUpdate()
