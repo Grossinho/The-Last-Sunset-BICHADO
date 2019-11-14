@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] MeshRenderer carroMafia1, carroMafia2, carroMafia3, carroMafia4, carroMafia5;
     [SerializeField] Collider coliderCarroMafia;
-    [SerializeField] UnityEngine.Rendering.PostProcessing.PostProcessLayer post;
+    
 
     Bloom bloom;
     LensAberrations lensAberrations;
@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
         carroMafia4.enabled = false;
         carroMafia5.enabled = false;
         coliderCarroMafia.enabled = false;
-     // post = GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>();
+     
 
     }
     private void Update()
@@ -111,12 +111,7 @@ public class GameController : MonoBehaviour
     }
 
 
-    public void LigaPost(bool simNao)
-    {
-
-        
-        post.enabled = simNao;
-    }
+ 
 }
 
 
