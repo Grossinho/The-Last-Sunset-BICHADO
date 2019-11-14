@@ -22,7 +22,7 @@ public class Coletavel : MonoBehaviour
     IEnumerator toca()
     {
         mudaMusica.Play();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(mudaMusica.clip.length);
         SoundManager.instance.RandomPlay(musicas);
         Destroy(gameObject);
     }
