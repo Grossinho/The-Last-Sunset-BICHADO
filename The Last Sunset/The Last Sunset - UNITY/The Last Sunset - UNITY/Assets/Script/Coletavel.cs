@@ -5,19 +5,26 @@ using UnityEngine;
 public class Coletavel : MonoBehaviour
 {
     [SerializeField] AudioClip[] musicas;
+    [SerializeField] AudioSource mudaMusica;
 
 
-
-    CarroMafia car;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SoundManager.instance.RandomPlay(musicas);
-            Destroy(gameObject);       
+
+            StartCoroutine(toca());
 
         }
+    }
+
+    IEnumerator toca()
+    {
+        mudaMusica.Play();
+        yield return new WaitForSeconds(3f);
+        SoundManager.instance.RandomPlay(musicas);
+        Destroy(gameObject);
     }
 
    
