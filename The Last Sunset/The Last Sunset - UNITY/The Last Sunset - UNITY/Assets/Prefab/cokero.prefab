@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2328322637010904587}
   - component: {fileID: 1211610151813241735}
   - component: {fileID: 6912006947976363322}
+  - component: {fileID: 4177753477226820000}
   m_Layer: 0
   m_Name: cokero
   m_TagString: Untagged
@@ -90,5 +91,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 890248b0b07b0fc4d91251f20f19b6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4177753477226820000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916278772771888274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b8d834ab6767a46a7b4fbc2358851e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
