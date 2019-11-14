@@ -14,7 +14,7 @@ public class Veiculo : MonoBehaviour
     [SerializeField] float Velocidade, pesoVeiculo = 1500;
     [SerializeField] float limiteLateral;
     [SerializeField] float rotationZ, sensitivityZ, curva;
-
+    [SerializeField] float carregaNitro;
     bool perdaVelo = false;
 
     public Image BarraNitro;
@@ -172,7 +172,7 @@ public class Veiculo : MonoBehaviour
         }
         else
         {
-            NitroAtual += Time.deltaTime * ( Velocidade / 25) * Mathf.Pow(2.718f, multEuler);
+            NitroAtual += Time.deltaTime * ( Velocidade / carregaNitro) * Mathf.Pow(2.718f, multEuler);
         }
         if (NitroAtual <= 0)
         {
@@ -188,17 +188,17 @@ public class Veiculo : MonoBehaviour
 
             NitroAtual -= Time.deltaTime * (Velocidade / 3) * Mathf.Pow(2.718f, multEuler);
             Velocidade += 0.1f;
-            GameController.instancia.nitro(3.0f);
+            GameController.instancia.nitro(1f);
             GameController.instancia.zom(true);
-            GameController.instancia.LigaPost(false);
+           // GameController.instancia.LigaPost(0);
         }
-           else
-           {
-              GameController.instancia.LigaPost(true);
+        else
+        {
+             // GameController.instancia.LigaPost(3);
               GameController.instancia.nitro(0f);
-                GameController.instancia.zom(false);
+              GameController.instancia.zom(false);
                 
-           }
+        }
 
     }
 

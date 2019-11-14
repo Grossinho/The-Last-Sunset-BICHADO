@@ -2265,14 +2265,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970548999}
-  m_LocalRotation: {x: 0.04773478, y: -0, z: -0, w: 0.99886006}
-  m_LocalPosition: {x: 0, y: 4.76, z: -172.38}
+  m_LocalRotation: {x: 0.038521998, y: -0, z: -0, w: 0.9992578}
+  m_LocalPosition: {x: -0.086, y: 4.753, z: -173.264}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6203445511752094906}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 5.472, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.4150004, y: 0, z: 0}
 --- !u!81 &970548996
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2375,14 +2375,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings:
-    threshold: 1.9
-    softKnee: 0.19
-    radius: 1
-    intensity: 2.24
-    highQuality: 1
-    antiFlicker: 0
+    threshold: 1.4
+    softKnee: 0.226
+    radius: 6.52
+    intensity: 0
+    highQuality: 0
+    antiFlicker: 1
     dirtTexture: {fileID: 0}
-    dirtIntensity: 2.5
+    dirtIntensity: 100
   m_Shader: {fileID: 4800000, guid: e45d4f28262b04d10a075856ab5fdb5e, type: 3}
 --- !u!114 &970549002
 MonoBehaviour:
@@ -2397,9 +2397,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _settings:
-    shutterAngle: 270
-    sampleCount: 10
-    frameBlending: 0.4
+    shutterAngle: 360
+    sampleCount: 20
+    frameBlending: 0.75
   _reconstructionShader: {fileID: 4800000, guid: 7ea8cfee2809541fa81c5ed422ded933,
     type: 3}
   _frameBlendingShader: {fileID: 4800000, guid: 83da3aecb8b462f498946f5198cbd58e,
@@ -2453,14 +2453,14 @@ MonoBehaviour:
   volumeTrigger: {fileID: 970548994}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 3
   temporalAntialiasing:
-    jitterSpread: 1
-    sharpness: 3
-    stationaryBlending: 0.248
+    jitterSpread: 0.1
+    sharpness: 2.15
+    stationaryBlending: 0
     motionBlending: 0
   subpixelMorphologicalAntialiasing:
     quality: 2
@@ -2492,8 +2492,8 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 1
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
@@ -5809,6 +5809,7 @@ MonoBehaviour:
   rotationZ: 0
   sensitivityZ: 1.5
   curva: 10
+  carregaNitro: 0
   BarraNitro: {fileID: 1758959742}
   Velocimetro: {fileID: 1003694704}
   NitroCheio: 100
@@ -6289,6 +6290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 8936775733529155200}
+  musicaInicial: {fileID: 8300000, guid: 7217c067a589cc14094581ff7807ba82, type: 3}
 --- !u!23 &6666982645248834062 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8451814482747739780, guid: b5b57acf9912dc440941f61143f956a2,
@@ -6554,15 +6556,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: decf7845049db5d44860c3bdb1dec002, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 7217c067a589cc14094581ff7807ba82, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 180
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

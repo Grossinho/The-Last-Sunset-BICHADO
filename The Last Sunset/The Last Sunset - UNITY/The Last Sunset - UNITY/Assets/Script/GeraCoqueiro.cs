@@ -11,7 +11,8 @@ public class GeraCoqueiro : MonoBehaviour
    
 
     float tempo;
-
+    int KMAnterior;
+    int KMAtual;
 
     Vector3 startPos;
 
@@ -22,7 +23,8 @@ public class GeraCoqueiro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        KMAnterior = 0;
+        KMAtual = 0;
 
 
     }
@@ -31,7 +33,13 @@ public class GeraCoqueiro : MonoBehaviour
     void Update()
     {
         tempo += cronometro * Time.deltaTime;
-      
+        KMAtual = (int)GameController.instancia.distancia;
+
+        if (KMAtual != KMAnterior)
+        {
+            RetornaCarro();
+            KMAnterior = KMAtual;
+        }
 
         if (tempo > 5)
         {
