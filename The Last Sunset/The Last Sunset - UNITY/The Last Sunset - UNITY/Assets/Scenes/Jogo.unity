@@ -2458,9 +2458,9 @@ MonoBehaviour:
   finalBlitToCameraTarget: 0
   antialiasingMode: 3
   temporalAntialiasing:
-    jitterSpread: 0.1
-    sharpness: 0.7
-    stationaryBlending: 0
+    jitterSpread: 1
+    sharpness: 3
+    stationaryBlending: 0.248
     motionBlending: 0
   subpixelMorphologicalAntialiasing:
     quality: 2
@@ -4945,6 +4945,7 @@ MonoBehaviour:
   carroMafia4: {fileID: 4885037868871836089}
   carroMafia5: {fileID: 6666982645248834062}
   coliderCarroMafia: {fileID: 6940560477561895952}
+  post: {fileID: 970549004}
   zoom: 80
   normal: 60
 --- !u!4 &10743436424521309

@@ -190,11 +190,12 @@ public class Veiculo : MonoBehaviour
             Velocidade += 0.1f;
             GameController.instancia.nitro(3.0f);
             GameController.instancia.zom(true);
+            GameController.instancia.LigaPost(false);
         }
            else
            {
-                
-                GameController.instancia.nitro(0f);
+              GameController.instancia.LigaPost(true);
+              GameController.instancia.nitro(0f);
                 GameController.instancia.zom(false);
                 
            }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.CinematicEffects;
 
+
 public class GameController : MonoBehaviour
 {
     public static GameController instancia;
@@ -15,10 +16,11 @@ public class GameController : MonoBehaviour
     public float distancia;
     Vector3 posInicial, textoPosInicial;
     [SerializeField] float tempo = 3;
-
+    
 
     [SerializeField] MeshRenderer carroMafia1, carroMafia2, carroMafia3, carroMafia4, carroMafia5;
     [SerializeField] Collider coliderCarroMafia;
+    [SerializeField] UnityEngine.Rendering.PostProcessing.PostProcessLayer post;
 
     Bloom bloom;
     LensAberrations lensAberrations;
@@ -51,6 +53,8 @@ public class GameController : MonoBehaviour
         carroMafia4.enabled = false;
         carroMafia5.enabled = false;
         coliderCarroMafia.enabled = false;
+     // post = GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>();
+
     }
     private void Update()
     {
@@ -104,6 +108,14 @@ public class GameController : MonoBehaviour
             cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, normal, Time.deltaTime * smooth);
             //lensAberrations.setDistortion(0);
         }        
+    }
+
+
+    public void LigaPost(bool simNao)
+    {
+
+        
+        post.enabled = simNao;
     }
 }
 
