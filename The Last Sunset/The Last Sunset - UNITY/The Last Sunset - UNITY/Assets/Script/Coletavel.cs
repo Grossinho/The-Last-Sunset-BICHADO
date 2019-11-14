@@ -7,12 +7,8 @@ public class Coletavel : MonoBehaviour
     [SerializeField] AudioClip[] musicas;
 
 
-    CarroMafia car;
 
-    private void Start()
-    {
-       // Destroy(gameObject, 30);
-    }
+    CarroMafia car;
 
     private void OnTriggerEnter(Collider other)
     {
