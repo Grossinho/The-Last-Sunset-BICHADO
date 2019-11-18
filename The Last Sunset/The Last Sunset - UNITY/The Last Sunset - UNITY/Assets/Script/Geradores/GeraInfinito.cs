@@ -32,12 +32,12 @@ public class GeraInfinito : MonoBehaviour
     
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         this.gameObject.transform.position = Vector3.zero;
         startPos = Vector3.zero;
         float updateTime = Time.realtimeSinceStartup;
-
+       /* 
         for (int x = -halfTilesX; x < halfTilesX; x++)
         {
             for (int z = -halfTileZ; z < halfTileZ; z++)
@@ -55,10 +55,10 @@ public class GeraInfinito : MonoBehaviour
             }
         }
 
-        
+        */
 
     }
-
+    
     // Update is called once per frame
     void FixedUpdate()
     {

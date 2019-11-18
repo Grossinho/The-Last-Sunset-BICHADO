@@ -297,7 +297,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 174739280}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c516cff7deb84144cbd69524412387d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 87f158d44a932d4408c0b8f8dba4e562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 8556777137932979803, guid: 5a673a78bba6d904aa233c5be6e482c5, type: 3}
@@ -2380,7 +2380,7 @@ MonoBehaviour:
   _settings:
     shutterAngle: 360
     sampleCount: 20
-    frameBlending: 0.75
+    frameBlending: 0.45
   _reconstructionShader: {fileID: 4800000, guid: 7ea8cfee2809541fa81c5ed422ded933,
     type: 3}
   _frameBlendingShader: {fileID: 4800000, guid: 83da3aecb8b462f498946f5198cbd58e,
@@ -4022,7 +4022,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1539385797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c516cff7deb84144cbd69524412387d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 87f158d44a932d4408c0b8f8dba4e562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 8556777137932979803, guid: 5a673a78bba6d904aa233c5be6e482c5, type: 3}
@@ -5687,7 +5687,7 @@ MonoBehaviour:
   rotationZ: 0
   sensitivityZ: 1.5
   curva: 10
-  carregaNitro: 0
+  carregaNitro: 25
   BarraNitro: {fileID: 1758959742}
   Velocimetro: {fileID: 1003694704}
   NitroCheio: 100
@@ -6168,7 +6168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 8936775733529155200}
-  musicaInicial: {fileID: 8300000, guid: 7217c067a589cc14094581ff7807ba82, type: 3}
+  musicaInicial: {fileID: 8300000, guid: d0e0da27ee0d8cf4b93961135973738a, type: 3}
 --- !u!1 &6669610297924795487
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,8 +19,6 @@ public class GeraCoqueiro : MonoBehaviour
     [SerializeField]float cronometro = 1;
 
 
-
-    // Start is called before the first frame update
     void Start()
     {
         KMAnterior = 0;
@@ -29,7 +27,6 @@ public class GeraCoqueiro : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         tempo += cronometro * Time.deltaTime;
@@ -37,28 +34,27 @@ public class GeraCoqueiro : MonoBehaviour
 
         if (KMAtual != KMAnterior)
         {
-            RetornaCarro();
+            RetornaCoqueiro();
             KMAnterior = KMAtual;
         }
 
         if (tempo > 5)
         {
 
-            RetornaCarro();
+            RetornaCoqueiro();
             tempo = 0;
 
         }
     }
 
 
-    void RetornaCarro()
+    void RetornaCoqueiro()
     {
 
 
         GameObject Coco = (GameObject)Instantiate(plane, transform.position, transform.rotation);
 
 
-        Destroy(Coco, 15f);
     }
 }
 
