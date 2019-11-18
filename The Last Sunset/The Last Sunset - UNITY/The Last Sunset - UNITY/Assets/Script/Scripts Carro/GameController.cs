@@ -27,12 +27,14 @@ public class GameController : MonoBehaviour
     public float normal = 60;
     float smooth = 5;
     bool isZoomed = false;
+    bool paused = false;
+
 
 
     void Awake()
     {
         if (instancia == null) instancia = this;
-        else if (instancia != this) Destroy(this);
+        else if (instancia != this) Destroy(this.gameObject);
     }
 
     private void Start()
@@ -43,6 +45,9 @@ public class GameController : MonoBehaviour
         posInicial = carroPos.position;
 
         textoPosInicial = textoMusica.transform.localPosition;
+        
+
+
 
     }
     private void Update()
@@ -58,6 +63,8 @@ public class GameController : MonoBehaviour
             textoMusica.transform.localPosition = textoPosInicial;
         }
 
+        Pausar();
+        
     }
 
     public void SaveRecord()
@@ -94,6 +101,28 @@ public class GameController : MonoBehaviour
 
         
         post.enabled = simNao;
+    }
+
+
+
+
+
+    public void Pausar()
+    {
+        if (paused)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            paused = !paused;
+            
+        }
     }
 }
 

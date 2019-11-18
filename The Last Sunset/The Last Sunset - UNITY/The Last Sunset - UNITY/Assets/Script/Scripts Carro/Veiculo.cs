@@ -62,9 +62,9 @@ public class Veiculo : MonoBehaviour
         SistemaDeNitro();
         AplicaBarra();
 
-        if(Velocidade >= 120)
+        if(Velocidade >= 180)
         {
-            Velocidade = 120;
+            Velocidade = 180;
         }
 
     }
