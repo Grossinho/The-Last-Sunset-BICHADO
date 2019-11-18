@@ -17,9 +17,7 @@ public class GameController : MonoBehaviour
     Vector3 posInicial, textoPosInicial;
     [SerializeField] float tempo = 3;
     
-
-   
-    
+    [SerializeField] UnityEngine.Rendering.PostProcessing.PostProcessLayer post;
 
     Bloom bloom;
     LensAberrations lensAberrations;
@@ -46,8 +44,6 @@ public class GameController : MonoBehaviour
 
         textoPosInicial = textoMusica.transform.localPosition;
 
-        
-
     }
     private void Update()
     {
@@ -62,8 +58,6 @@ public class GameController : MonoBehaviour
             textoMusica.transform.localPosition = textoPosInicial;
         }
 
-
-       
     }
 
     public void SaveRecord()
@@ -95,7 +89,12 @@ public class GameController : MonoBehaviour
     }
 
 
- 
+    public void LigaPost(bool simNao)
+    {
+
+        
+        post.enabled = simNao;
+    }
 }
 
 
