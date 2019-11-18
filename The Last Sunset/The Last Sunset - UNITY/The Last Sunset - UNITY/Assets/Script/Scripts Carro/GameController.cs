@@ -18,8 +18,7 @@ public class GameController : MonoBehaviour
     [SerializeField] float tempo = 3;
     
 
-    [SerializeField] MeshRenderer carroMafia1, carroMafia2, carroMafia3, carroMafia4, carroMafia5;
-    [SerializeField] Collider coliderCarroMafia;
+   
     
 
     Bloom bloom;
@@ -47,13 +46,7 @@ public class GameController : MonoBehaviour
 
         textoPosInicial = textoMusica.transform.localPosition;
 
-        carroMafia1.enabled = false;
-        carroMafia2.enabled = false;
-        carroMafia3.enabled = false;
-        carroMafia4.enabled = false;
-        carroMafia5.enabled = false;
-        coliderCarroMafia.enabled = false;
-     
+        
 
     }
     private void Update()
@@ -70,16 +63,7 @@ public class GameController : MonoBehaviour
         }
 
 
-        if (!carroMafia1.enabled && distancia >= tempo)
-        {
-
-            carroMafia1.enabled = true;
-            carroMafia2.enabled = true;
-            carroMafia3.enabled = true;
-            carroMafia4.enabled = true;
-            carroMafia5.enabled = true;
-            coliderCarroMafia.enabled = true;
-        }
+       
     }
 
     public void SaveRecord()
