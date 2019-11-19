@@ -19,7 +19,6 @@ public class GameOverPal : MonoBehaviour
         {            
             GameController.instancia.SaveRecord();
             Debug.Log(PlayerPrefs.GetFloat("Record"));
-            Time.timeScale = 0;
             SceneManager.LoadScene("Game Over");
         }           
     }

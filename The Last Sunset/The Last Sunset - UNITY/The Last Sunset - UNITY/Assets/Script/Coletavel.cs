@@ -6,6 +6,7 @@ public class Coletavel : MonoBehaviour
 {
     [SerializeField] AudioClip[] musicas;
     [SerializeField] AudioSource mudaMusica;
+    [SerializeField] GameObject corpo;
 
 
 
@@ -22,6 +23,7 @@ public class Coletavel : MonoBehaviour
     IEnumerator toca()
     {
         mudaMusica.Play();
+        corpo.SetActive(false);
         yield return new WaitForSeconds(mudaMusica.clip.length);
         SoundManager.instance.RandomPlay(musicas);
         Destroy(gameObject);
